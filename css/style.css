@@ -1,6 +1,10 @@
-.logo {
-    max-width: 4em;
-    margin-top: .4em;
+* {
+    font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+}
+
+.brand-logo img {
+    max-width: 1.8em;
+    margin-top: .2em;
 }
 
 body {
@@ -19,4 +23,72 @@ main {
 
 .collapsible div {
     border-color: grey !important;
+}
+
+h1 {
+    font-size: 2em !important;
+    font-weight: 500 !important;
+}
+
+h5 {
+    font-size: 1.5em !important;
+}
+
+.dropdown-trigger {
+    font-weight: 700;
+}
+
+.dropdown-content li a {
+    font-size: 0.75em !important;
+    font-weight: 500;
+}
+
+.dropdown-content li:hover {
+    filter: brightness(1.1);
+}
+
+h6 {
+    font-size: 1em !important;
+}
+
+.no-margin-bot {
+    margin-bottom: 0em !important;
+}
+
+.test1 {
+    background-color: yellow !important;
+}
+
+.test2 {
+    background-color: green !important;
+}
+
+.margin-left-1 {
+    margin-left: 0.3em !important;
+}
+
+.margin-right-1 {
+    margin-right: 1em !important;
+}
+
+.margin-top-4 {
+    margin-top: 3em !important;
+}
+
+.margin-bot-1 {
+    margin-bottom: 1em !important;
+}
+
+.sponsor {
+    max-height: 4em !important;
+    /*filter: grayscale(1.0);*/
+}
+
+.sponsor:hover {
+    /*filter: none;*/
+    filter: brightness(1.1);
+}
+
+.social-media:hover {
+    filter: brightness(2);
 }

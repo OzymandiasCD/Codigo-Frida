@@ -4,10 +4,12 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='shortcut icon' href='img/flower.png' type='image/x-icon'>
+    <link rel='shortcut icon' href='img/icon.png' type='image/x-icon'>
     <title>Layout</title>
     <!-- Custom CSS -->
     <link rel='stylesheet' href='css/style.css'>
+    <!-- Quicksand font -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Quicksand:400,500,700'>
     <!-- jQuery -->
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script>
@@ -25,20 +27,71 @@
 
     <nav class='grey lighten-5'>
         <div class='nav-wrapper container'>
-            <a href='#'>
-                <img class='logo' src='img/logo_black_and_white.png'>
-            </a>
-            <ul id='nav-mobile' class='right hide-on-med-and-down'>
-                <li><a class='black-text' href='#'>Curso</a></li>
-                <li><a class='black-text' href='#'>Mi equipo</a></li>
-                <li><a class='black-text' href='#'>Mentores</a></li>
-                <li><a class='black-text' href='#'>Fridas</a></li>
-                <li><a class='black-text' href='#'>Mi perfil</a></li>
+            <a class='brand-logo' href=''><img src='img/logo-colorless.png'></a>
+            <a class='sidenav-trigger' href='' data-target='sidenav'><i class='black-text material-icons'>menu</i></a>
+            <ul class='right hide-on-med-and-down'>
+                <li><a class='black-text' href=''>Curso</a></li>
+                <li><a class='black-text' href=''>Mis insignias</a></li>
+                <li><a class='black-text' href=''>Mi equipo</a></li>
+                <li><a class='black-text' href=''>Mentores</a></li>
+                <li><a class='black-text' href=''>Fridas</a></li>
+                <li><a class='black-text' href=''>Mi perfil</a></li>
+                <li><a class='black-text' href=''>Cerrar sesión</a></li>
             </ul>
         </div>
     </nav>
 
-    <main></main>
+    <ul class='sidenav' id='sidenav'>
+        <li><a class='black-text' href=''><i class='material-icons'>widgets</i>Curso</a></li>
+        <li><a class='black-text' href=''><i class='material-icons'>grade</i>Mis insignias</a></li>
+        <li>
+            <div class='divider'></div>
+        </li>
+        <li><a class='black-text' href=''><i class='material-icons'>group</i>Mi equipo</a></li>
+        <li><a class='black-text' href=''><i class='material-icons'>local_cafe</i>Mentores</a></li>
+        <li><a class='black-text' href=''><i class='material-icons'>favorite</i>Fridas</a></li>
+        <li>
+            <div class='divider'></div>
+        </li>
+        <li><a class='black-text' href=''><i class='material-icons'>person</i>Mi perfil</a></li>
+        <li><a class='black-text' href=''><i class='material-icons'>exit_to_app</i>Cerrar sesión</a></li>
+    </ul>
+
+    <main>
+        <div class='container'>
+            <div class='row'>
+                <div class='col s12 m8'>
+                    <h1 class='pink-text no-margin-bot'>Actividad 1. Problemáticas y objetivos del desarrollo
+                        sostenible</h1>
+                    <h6 class='grey-text text-darken-3'>Límite de entrega: 18 oct. 23:00</h6>
+                </div>
+                <div class='col s12 m4 margin-top-4'>
+                    <a class='waves-effect waves-light btn-small pink white-text'><i class='material-icons'>keyboard_arrow_left</i></a>
+                    <!-- Dropdown trigger -->
+                    <a class='dropdown-trigger btn-small pink white-text' data-target='dropdown'>Actividad 1</a>
+                    <!-- Dropdown structure -->
+                    <ul id='dropdown' class='dropdown-content'>
+                        <li><a class='pink white-text center-align' href=''>ACTIVIDAD 2</a></li>
+                        <li><a class='pink white-text center-align' href=''>ACTIVIDAD 3</a></li>
+                        <li><a class='pink white-text center-align' href=''>ACTIVIDAD 4</a></li>
+                        <li><a class='pink white-text center-align' href=''>ACTIVIDAD 5</a></li>
+                    </ul>
+                    <a class='waves-effect waves-light btn-small pink white-text'><i class='material-icons'>keyboard_arrow_right</i></a>
+                </div>
+            </div>
+
+            <div class='row'>
+                <div class='col s12 m8'>
+                    <iframe src='https://docs.google.com/presentation/d/e/2PACX-1vRpaU7pWFHrAulkVUFHz07JcMUEmGAx1n5MIidM5y_GLjSkc9JRMULGbNOHgNpnlRB1p-A788LaqEHc/embed?start=false&loop=false&delayms=3000'
+                        frameborder='0' width='100%' height='517' allowfullscreen='true' mozallowfullscreen='true'
+                        webkitallowfullscreen='true'></iframe>
+                </div>
+                <div class='col s12 m4'>
+
+                </div>
+            </div>
+        </div>
+    </main>
 
     <footer class='page-footer grey darken-3'>
 
@@ -46,7 +99,7 @@
             <div class='row'>
 
                 <div class='col l6 s12'>
-                    <ul class='collapsible'>
+                    <ul class='collapsible grey-text text-lighten-2'>
                         <li>
                             <div class='grey darken-3 collapsible-header'><i class='material-icons'>info_outline</i>Código
                                 Frida</div>
@@ -60,19 +113,18 @@
                             <div class='collapsible-body'><span>Para comenzar a trabajar, .</span></div>
                         </li>
                         <li>
-                            <div class='grey darken-3 collapsible-header'><i class='material-icons'>low_priority</i>Qué puedo hacer</div>
+                            <div class='grey darken-3 collapsible-header'><i class='material-icons'>low_priority</i>Qué
+                                puedo hacer</div>
                             <div class='collapsible-body'><span>Lorem ipsum dolor sit amet.</span></div>
                         </li>
                     </ul>
                 </div>
 
                 <div class='col l4 offset-l2 s12'>
-                    <h5>Síguenos</h5>
-                    <ul>
-                        <li><a class='grey-text text-lighten-3' href=''>Facebook</a></li>
-                        <li><a class='grey-text text-lighten-3' href=''>Twitter</a></li>
-                        <li><a class='grey-text text-lighten-3' href=''>Instagram</a></li>
-                    </ul>
+                    <h5 class='grey-text text-lighten-2 margin-bot-1'>Patrocinadores</h5>
+                    <a class='margin-right-1' href='http://cognosac.org/' target='_blank'><img class='sponsor' src='img/sponsor-cognos.png'></a>
+                    <a class='margin-right-1' href='https://ludolab.org/' target='_blank'><img class='sponsor' src='img/sponsor-ludolab.png'></a>
+                    <a href='https://inist.mx/' target='_blank'><img class='sponsor' src='img/sponsor-inist.png'></a>
                 </div>
 
             </div>
@@ -81,8 +133,13 @@
         <div class='footer-copyright grey darken-4'>
             <div class='container'>
                 &copy; 2018 Código Frida
-                <a class='grey-text text-lighten-4 right' href='mailto:franciscoivan_lepe@ucol.mx?Subject=Código%20Frida%20Ayuda'
-                    target='_top'><i class='material-icons'>email</i></a>
+                <div class='right'>
+                    <a href='' target='_blank'><img class='social-media' src='img/social-facebook.png'></a>
+                    <a class='margin-left-1' href='' target='_blank'><img class='social-media' src='img/social-twitter.png'></a>
+                    <a class='margin-left-1' href='' target='_blank'><img class='social-media' src='img/social-github.png'></a>
+                    <a class='margin-left-1' href='mailto:franciscoivan_lepe@ucol.mx?Subject=Código%20Frida' target='_top'><img
+                            class='social-media' src='img/social-mail.png'></a>
+                </div>
             </div>
         </div>
 
