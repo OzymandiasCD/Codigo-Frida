@@ -27,16 +27,30 @@
                 <li><a class='black-text' href=''>Mi equipo</a></li>
                 <li><a class='black-text' href=''>Mentores</a></li>
                 <li><a class='black-text' href=''>Fridas</a></li>
-                <li><a class='black-text' href=''>Mi perfil</a></li>
-                <li><a class='black-text' href=''>Cerrar sesión</a></li>
+                <li><a class='black-text dropdown-trigger valign-wrapper' href='' data-target='profile-dropdown'>
+                        Jorge Ceballos
+                        <img class='circle user-nav right' src='img/user.jpg'>
+                    </a></li>
             </ul>
         </div>
     </nav>
 
+    <ul class='dropdown-content' id='profile-dropdown'>
+        <li><a class='black-text' href=''>Mi perfil</a></li>
+        <li><a class='black-text' href=''>Cerrar sesión</a></li>
+    </ul>
+
     <ul class='sidenav' id='sidenav'>
         <li>
-            <div class='user-view grey lighten-3'>
-                <img class='sidenav-image' src='img/logo-big-1.png'>
+            <div class='user-view'>
+                <div class='background'>
+                    <img src='img/background2.jpg'>
+                </div>
+                <a href=''>
+                    <img class='circle user-sidenav' src='img/user.jpg'>
+                    <span class='white-text name'>Jorge Ceballos</span>
+                    <span class='white-text email'>jor.cebs@gmail.com</span>
+                </a>
             </div>
         </li>
         <li><a class='black-text' href=''><i class='material-icons'>widgets</i>Curso</a></li>
@@ -50,55 +64,117 @@
         <li>
             <div class='divider'></div>
         </li>
-        <li><a class='black-text' href=''><i class='material-icons'>person</i>Mi perfil</a></li>
         <li><a class='black-text' href=''><i class='material-icons'>exit_to_app</i>Cerrar sesión</a></li>
     </ul>
 
-    <main>
-        <div class='container'>
-            <div class='row'>
-                <div class='col s12 l8'>
-                    <h1 class='pink-text no-margin-bot'>Actividad 1. Problemáticas y objetivos del desarrollo
-                        sostenible</h1>
-                    <h6 class='grey-text text-darken-3'>Límite de entrega: 18 oct. 23:00</h6>
+    <main class='container'>
+        <div class='row margin-bot-resizable'>
+            <div class='col s12 l8'>
+                <h1 class='pink-text no-margin-bot'>Actividad 1. Problemáticas y objetivos del desarrollo
+                    sostenible</h1>
+                <h6 class='grey-text text-darken-3'>Límite de entrega: 18 oct. 23:00</h6>
+            </div>
+            <div class='col s12 l4 margin-top-resizable'>
+                <div class='row'>
+                    <div class='col s2'>
+                        <a class='btn-small pink white-text'><i class='material-icons'>keyboard_arrow_left</i></a>
+                    </div>
+                    <div class='col s8 no-padding'>
+                        <a class='dropdown-trigger btn-small pink white-text' data-target='activity-dropdown'>Actividad
+                            1</a>
+                    </div>
+                    <div class='col s2'>
+                        <a class='btn-small pink white-text'><i class='material-icons'>keyboard_arrow_right</i></a>
+                    </div>
                 </div>
-                <div class='col s12 l4 margin-top-4'>
-                    <div class='row'>
-                        <div class='col s2 small-padding-right'>
-                            <a class='waves-effect waves-light btn-small pink white-text'><i class='material-icons'>keyboard_arrow_left</i></a>
+            </div>
+        </div>
+
+        <ul class='dropdown-content' id='activity-dropdown'>
+            <li><a class='pink white-text center-align' href=''>ACTIVIDAD 2</a></li>
+            <li><a class='pink white-text center-align' href=''>ACTIVIDAD 3</a></li>
+            <li><a class='pink white-text center-align' href=''>ACTIVIDAD 4</a></li>
+            <li><a class='pink white-text center-align' href=''>ACTIVIDAD 5</a></li>
+        </ul>
+
+        <div class='row'>
+            <div class='col s12 l8'>
+                <div class='card no-margin-top '>
+                    <div class='card-image'>
+                        <iframe src='https://docs.google.com/presentation/d/e/2PACX-1vRpaU7pWFHrAulkVUFHz07JcMUEmGAx1n5MIidM5y_GLjSkc9JRMULGbNOHgNpnlRB1p-A788LaqEHc/embed?start=false&loop=false&delayms=3000'
+                            frameborder='0' width='100%' height='517' allowfullscreen='true' mozallowfullscreen='true'
+                            webkitallowfullscreen='true'></iframe>
+                    </div>
+                    <div class='card-content grey lighten-5 padding-bot-025'>
+
+                        <div id='comments'>
+                            <div class='input-field'>
+                                <img class='prefix comment-image circle' src='img/user.jpg'>
+                                <p class='comment-text'>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nobis iste
+                                    quidem voluptatibus doloribus sequi dolorum repellat.
+                                </p>
+                            </div>
+
+                            <div class='input-field'>
+                                <img class='prefix comment-image circle' src='img/user.jpg'>
+                                <p class='comment-text'>
+                                    Nesciunt reiciendis unde quos illum distinctio in corporis facilis
+                                    consequuntur. Quae, consequatur commodi? Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit. Debitis, nobis iste
+                                    quidem voluptatibus doloribus sequi dolorum repellat!
+                                </p>
+                            </div>
                         </div>
-                        <div class='col s8 no-padding-sides'>
-                            <a class='dropdown-trigger btn-small pink white-text' data-target='dropdown'>Actividad 1</a>
-                            <ul id='dropdown' class='dropdown-content'>
-                                <li><a class='pink white-text center-align' href=''>ACTIVIDAD 2</a></li>
-                                <li><a class='pink white-text center-align' href=''>ACTIVIDAD 3</a></li>
-                                <li><a class='pink white-text center-align' href=''>ACTIVIDAD 4</a></li>
-                                <li><a class='pink white-text center-align' href=''>ACTIVIDAD 5</a></li>
-                            </ul>
-                        </div>
-                        <div class='col s2 small-padding-left'>
-                            <a class='waves-effect waves-light btn-small pink white-text'><i class='material-icons'>keyboard_arrow_right</i></a>
-                        </div>
+
+                        <form>
+                            <div class='row'>
+                                <div class='col s9 m10'>
+                                    <div class='input-field'>
+                                        <img class='prefix comment-image circle' src='img/user.jpg'>
+                                        <input class='validate' placeholder='Añade un comentario sobre esta actividad...'>
+                                    </div>
+                                </div>
+                                <div class='col s3 m2'>
+                                    <button class='pink btn-small comment-btn'>Enviar</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
 
-            <div class='row'>
-                <div class='col s12 l8'>
-                    <iframe src='https://docs.google.com/presentation/d/e/2PACX-1vRpaU7pWFHrAulkVUFHz07JcMUEmGAx1n5MIidM5y_GLjSkc9JRMULGbNOHgNpnlRB1p-A788LaqEHc/embed?start=false&loop=false&delayms=3000'
-                        frameborder='0' width='100%' height='517' allowfullscreen='true' mozallowfullscreen='true'
-                        webkitallowfullscreen='true'></iframe>
+            <div class='col s12 l4'>
+                <div class='card-panel grey lighten-5 center-align no-margin-top'>
+                    <span class='black-text'>
+                        <h5 class='badge-title'>Insignias disponibles</h5>
+                        <a class='tooltipped' data-position='top' data-tooltip='Entrega la actividad a tiempo'>
+                            <img class='badge' src='img/badge-submit-1.png'>
+                        </a>
+                        <a class='tooltipped' data-position='top' data-tooltip='Entrega la actividad al menos 24 horas antes de la fecha límite'>
+                            <img class='badge' src='img/badge-early-1.png'>
+                        </a>
+                        <a class='tooltipped' data-position='top' data-tooltip='Recibe una evaluación buena en tu entrega'>
+                            <img class='badge' src='img/badge-good-1.png'>
+                        </a>
+                        <a class='tooltipped' data-position='top' data-tooltip='Recibe una evaluación excelente en tu entrega'>
+                            <img class='badge' src='img/badge-excelent-1.png'>
+                        </a>
+                    </span>
                 </div>
-                <div class='col s12 l4'>
-                    <div class="card-panel teal">
-                        <span class='white-text'>I am a very simple card. I am good at containing small bits of
-                            information.
-                            I am convenient because I require little markup to use effectively. I am similar to
-                            what is
-                            called a panel in other frameworks.
-                        </span>
+
+                <form action=''>
+                    <div class='file-field input-field'>
+                        <div class='btn pink white-text'>
+                            <span>Añadir archivos</span>
+                            <input type='file' multiple>
+                        </div>
+                        <div class='file-path-wrapper'>
+                            <input class='file-path validate hide' type='text'>
+                        </div>
                     </div>
-                </div>
+                </form>
+                <a class='btn pink white-text padding-top-03'>Entregar actividad</a>
             </div>
         </div>
     </main>
@@ -137,7 +213,7 @@
                 </div>
 
                 <div class='col s12 l4 offset-l2'>
-                    <h5 class='grey-text text-lighten-2 margin-bot-1'>Patrocinadores</h5>
+                    <h4 class='grey-text text-lighten-2 margin-bot-1'>Patrocinadores</h4>
                     <a class='sponsor' href='http://cognosac.org/' target='_blank'><img src='img/sponsor-cognos.png'></a>
                     <a class='sponsor' href='https://ludolab.org/' target='_blank'><img src='img/sponsor-ludolab.png'></a>
                     <a class='sponsor' href='https://inist.mx/' target='_blank'><img src='img/sponsor-inist.png'></a>

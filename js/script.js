@@ -5,4 +5,11 @@ $(document).ready(function () {
         hover: true,
         coverTrigger: false
     });
+    $('.tooltipped').tooltip({
+        margin: 50,
+        inDuration: 0,
+        outDuration: 0,
+        enterDelay: 0,
+        exitDelay: 0
+    });
 });

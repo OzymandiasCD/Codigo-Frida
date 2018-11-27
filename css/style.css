@@ -2,11 +2,6 @@
     font-family: 'Quicksand', Helvetica, Arial, sans-serif;
 }
 
-.brand-logo img {
-    max-width: 1.8em;
-    margin-top: .2em;
-}
-
 body {
     display: flex;
     min-height: 100vh;
@@ -17,70 +12,137 @@ main {
     flex: 1 0 auto;
 }
 
-.collapsible {
-    border-color: grey !important;
-}
-
-.collapsible div {
-    border-color: grey !important;
-}
-
 h1 {
     font-size: 2em !important;
     font-weight: 500 !important;
 }
 
-h5 {
+h4 {
     font-size: 1.5em !important;
-}
-
-.dropdown-trigger {
-    font-weight: 700;
-}
-
-.dropdown-content li a {
-    font-size: 0.75em !important;
-    font-weight: 500;
-}
-
-.dropdown-content li:hover {
-    filter: brightness(1.1);
 }
 
 h6 {
     font-size: 1em !important;
 }
 
-.no-margin-bot {
-    margin-bottom: 0em !important;
+input:focus {
+    box-shadow: 0 1px 0 0 #e91e63 !important;
+    border-bottom: 1px solid #e91e63 !important;
 }
 
-.test1 {
-    background-color: yellow !important;
+/*
+In case above input:focus interfers with other inputs, use:
+
+.input-field:focus {
+    box-shadow: 0 1px 0 0 #e91e63 !important;
+    border-bottom: 1px solid #e91e63 !important;
+}
+*/
+
+/***************** header *****************/
+
+.brand-logo img {
+    max-width: 1.8em;
+    margin-top: .2em;
 }
 
-.test2 {
-    background-color: green !important;
+.user-view {
+    padding-left: 2.5em !important;
 }
 
-.margin-left-1 {
-    margin-left: 0.3em !important;
+.user-nav {
+    max-width: 2.5em !important;
+    margin-left: 0.7em !important;
 }
 
-.margin-right-1 {
-    margin-right: 1em !important;
+.user-sidenav {
+    width: 5.5em !important;
+    height: 5.5em !important;
+    margin-top: 1.1em !important;
+    padding-bottom: 0 !important;
 }
 
-.margin-top-4 {
-    margin-top: 3em !important;
+.name {
+    margin-top: 0.5em !important;
 }
 
-.margin-bot-1 {
-    margin-bottom: 1em !important;
+/***************** index *****************/
+
+.index-row {
+    width: 100%;
+    height: 15em !important;
 }
 
-.margin-top-4 {
-    margin-bottom: 3em !important;
+.index-row img {
+    max-width: 6em;
+    margin-top: 5em;
+}
+
+.index-card {
+    width: 40% !important;
+    margin: auto !important;
+    margin-top: -3em !important;
+    border-radius: 10px !important;
+    border: solid #bdbdbd 1px;
+    padding: 3em !important;
+}
+
+.small-font {
+    font-size: 0.7em;
+    font-weight: 900;
+}
+
+/***************** activity *****************/
+
+.badge {
+    max-width: 4.5em;
+}
+
+.badge-title {
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-top: 0 !important;
+    margin-bottom: 1.3em !important;
+}
+
+.btn {
+    width: 100% !important;
+    height: 3.2em !important;
+    font-weight: 700 !important;
+}
+
+.btn-small {
+    width: 100% !important;
+    padding: 0 !important;
+    font-weight: 700 !important;
+}
+
+#activity-dropdown li a {
+    font-weight: 500;
+    font-size: 0.8em !important;
+}
+
+#activity-dropdown li:hover {
+    filter: brightness(1.1);
+}
+
+.comment-image {
+    max-width: 1em !important;
+}
+
+.comment-btn {
+    margin-top: 1.8em !important;
+}
+
+.comment-text {
+    margin-left: 3em !important;
+}
+
+/***************** footer *****************/
+
+.collapsible,
+.collapsible div {
+    border-color: grey !important;
 }
 
 .sponsor img {
@@ -97,35 +159,87 @@ h6 {
 }
 
 .social-media {
-    max-width: 16px;
+    max-width: 1.1em;
 }
 
 .social-media:hover {
     filter: brightness(2);
 }
 
-.sidenav-image {
-    width: 60%;
-    height: auto;
-    margin-left: 1em;
+/***************** helpers *****************/
+
+.margin-left-1 {
+    margin-left: 0.3em !important;
 }
 
-.no-padding-sides {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+.margin-top-2 {
+    margin-top: 2em !important;
 }
 
-.small-padding-left {
-    padding-left: 0.2em !important;
+.margin-top-3 {
+    margin-top: 3em !important;
 }
 
-.small-padding-right {
-    padding-right: 0.2em !important;
+.margin-top-12 {
+    margin-top: 12em !important;
 }
 
-.btn-small {
-    display: block;
+.margin-bot-025 {
+    margin-bottom: 0.25em !important;
+}
+
+.margin-bot-1 {
+    margin-bottom: 1em !important;
+}
+
+.margin-bot-2 {
+    margin-bottom: 2em !important;
+}
+
+.no-margin {
     margin: 0 !important;
+}
+
+.no-margin-top {
+    margin-top: 0 !important;
+}
+
+.no-margin-bot {
+    margin-bottom: 0 !important;
+}
+
+.no-padding {
     padding: 0 !important;
-    width: 100%;
+}
+
+.padding-top-03 {
+    padding-top: 0.3em !important;
+}
+
+.padding-bot-025 {
+    padding-bottom: 0.25em !important;
+}
+
+@media all and (min-width: 993px) {
+    .margin-top-resizable {
+        margin-top: 3em !important;
+    }
+
+    .margin-bot-resizable {
+        margin-bottom: 2em !important;
+    }
+}
+
+@media all and (max-width: 992px) {
+    .margin-top-resizable {
+        margin-top: 1em !important;
+    }
+
+    .margin-bot-resizable {
+        margin-bottom: 0em !important;
+    }
+
+    .index-card {
+        width: 85% !important;
+    }
 }
