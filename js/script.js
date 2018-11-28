@@ -13,4 +13,7 @@ $(document).ready(function () {
         enterDelay: 0,
         exitDelay: 0
     });
+    $('.tooltipped-lock').tooltip({
+        position: 'top'
+    });
 });

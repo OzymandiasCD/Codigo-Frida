@@ -140,6 +140,13 @@ input:focus {
     font-weight: 900;
 }
 
+/***************** course *****************/
+
+.locked-image {
+    opacity: 0.3 !important;
+    filter: brightness(0.8) !important;
+}
+
 /***************** activity *****************/
 
 .badge {
