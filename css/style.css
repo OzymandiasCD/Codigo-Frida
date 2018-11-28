@@ -25,21 +25,64 @@ h6 {
     font-size: 1em !important;
 }
 
+/***************** materialize overrides *****************/
+
+.btn,
+.btn-small {
+    font-weight: 700 !important;
+}
+
 input:focus {
     box-shadow: 0 1px 0 0 #e91e63 !important;
     border-bottom: 1px solid #e91e63 !important;
 }
 
-/*
-In case above input:focus interfers with other inputs, use:
-
+/* In case above input:focus interfers with other inputs, use:
 .input-field:focus {
     box-shadow: 0 1px 0 0 #e91e63 !important;
     border-bottom: 1px solid #e91e63 !important;
+}*/
+
+.input-field :focus+label {
+    color: #e91e63 !important;
 }
-*/
+
+.tabs .tab a {
+    color: #fda7c2 !important;
+    font-weight: 500 !important;
+}
+
+.tabs .tab.disabled a {
+    color: #ffd6e3 !important;
+    font-weight: 500 !important;
+}
+
+.tabs .tab a:hover {
+    color: #e91e63 !important;
+}
+
+.tabs .tab.disabled a:hover {
+    color: #ffd6e3 !important;
+}
+
+.tabs .tab a.active {
+    color: #e91e63 !important;
+    background-color: #ffdde8 !important;
+}
+
+.tabs .indicator {
+    background-color: #e91e63 !important;
+}
+
+.tabs-fixed-width {
+    border-bottom: solid #e0e0e0 1px !important;
+}
 
 /***************** header *****************/
+
+.nav-wrapper {
+    font-weight: 500 !important;
+}
 
 .brand-logo img {
     max-width: 1.8em;
@@ -75,7 +118,12 @@ In case above input:focus interfers with other inputs, use:
 
 .index-row img {
     max-width: 6em;
-    margin-top: 5em;
+    margin-top: 3.5em;
+}
+
+.index-row h5 {
+    margin-top: 0em;
+    font-weight: 500;
 }
 
 .index-card {
@@ -98,23 +146,15 @@ In case above input:focus interfers with other inputs, use:
     max-width: 4.5em;
 }
 
-.badge-title {
+.card-title {
     font-size: 1.3em;
     font-weight: 500;
     margin-top: 0 !important;
     margin-bottom: 1.3em !important;
 }
 
-.btn {
-    width: 100% !important;
+.activity-btn {
     height: 3.2em !important;
-    font-weight: 700 !important;
-}
-
-.btn-small {
-    width: 100% !important;
-    padding: 0 !important;
-    font-weight: 700 !important;
 }
 
 #activity-dropdown li a {
@@ -188,6 +228,10 @@ In case above input:focus interfers with other inputs, use:
     margin-bottom: 0.25em !important;
 }
 
+.margin-bot-05 {
+    margin-bottom: 0.5em !important;
+}
+
 .margin-bot-1 {
     margin-bottom: 1em !important;
 }
@@ -220,9 +264,28 @@ In case above input:focus interfers with other inputs, use:
     padding-bottom: 0.25em !important;
 }
 
+.round-all-corners {
+    border-radius: 10px !important;
+}
+
+.round-top-corners {
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
+.width-100 {
+    width: 100% !important;
+}
+
+/***************** resizable *****************/
+
 @media all and (min-width: 993px) {
-    .margin-top-resizable {
+    .margin-top-resizable-activity {
         margin-top: 3em !important;
+    }
+
+    .margin-top-resizable-course {
+        margin-top: 2.2em !important;
     }
 
     .margin-bot-resizable {
@@ -231,8 +294,12 @@ In case above input:focus interfers with other inputs, use:
 }
 
 @media all and (max-width: 992px) {
-    .margin-top-resizable {
+    .margin-top-resizable-activity {
         margin-top: 1em !important;
+    }
+
+    .margin-top-resizable-course {
+        margin-top: 0em !important;
     }
 
     .margin-bot-resizable {

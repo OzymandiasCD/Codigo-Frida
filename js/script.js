@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $('.tabs').tabs();
     $('.sidenav').sidenav();
     $('.collapsible').collapsible();
     $('.dropdown-trigger').dropdown({
