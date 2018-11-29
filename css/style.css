@@ -47,6 +47,10 @@ input:focus {
     color: #e91e63 !important;
 }
 
+.progress {
+    height: 1.5em !important;
+}
+
 .tabs .tab a {
     color: #fda7c2 !important;
     font-weight: 500 !important;
@@ -67,7 +71,7 @@ input:focus {
 
 .tabs .tab a.active {
     color: #e91e63 !important;
-    background-color: #ffdde8 !important;
+    background-color: #ffe9f0 !important;
 }
 
 .tabs .indicator {
@@ -109,6 +113,12 @@ input:focus {
     margin-top: 0.5em !important;
 }
 
+/***************** across *****************/
+
+.small-badge {
+    max-width: 4.5em !important;
+}
+
 /***************** index *****************/
 
 .index-row {
@@ -127,10 +137,8 @@ input:focus {
 }
 
 .index-card {
-    width: 40% !important;
     margin: auto !important;
     margin-top: -3em !important;
-    border-radius: 10px !important;
     border: solid #bdbdbd 1px;
     padding: 3em !important;
 }
@@ -147,11 +155,13 @@ input:focus {
     filter: brightness(0.8) !important;
 }
 
-/***************** activity *****************/
-
-.badge {
-    max-width: 4.5em;
+.progress-amount {
+    font-size: 0.85em !important;
+    font-weight: 900 !important;
+    margin-left: 1em !important;
 }
+
+/***************** activity *****************/
 
 .card-title {
     font-size: 1.3em;
@@ -183,6 +193,38 @@ input:focus {
 
 .comment-text {
     margin-left: 3em !important;
+}
+
+/***************** badges *****************/
+
+.big-badge {
+    max-width: 8em !important;
+    transition: all 0.15s ease-in !important;
+    margin-top: 1em !important;
+    margin-bottom: 0.2em !important;
+}
+
+.big-badge:hover {
+    cursor: pointer;
+    filter: drop-shadow(12px 12px 5px rgba(100, 92, 92, 0.5)) !important;
+    transition: all 0.15s ease-in !important;
+}
+
+.huge-badge {
+    margin-top: 10% !important;
+    margin-bottom: 10% !important;
+    animation: rotate-animation 2s infinite linear;
+    -webkit-animation: rotate-animation 2s infinite linear;
+}
+
+@-webkit-keyframes rotate-animation {
+    from {-webkit-transform: rotateY(0deg);}
+    to {-webkit-transform: rotateY(360deg);}
+}
+
+@keyframes rotate-animation {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
 }
 
 /***************** footer *****************/
@@ -227,8 +269,8 @@ input:focus {
     margin-top: 3em !important;
 }
 
-.margin-top-12 {
-    margin-top: 12em !important;
+.margin-top-16 {
+    margin-top: 16em !important;
 }
 
 .margin-bot-025 {
@@ -263,6 +305,10 @@ input:focus {
     padding: 0 !important;
 }
 
+.no-padding-bot {
+    padding-bottom: 0 !important;
+}
+
 .padding-top-03 {
     padding-top: 0.3em !important;
 }
@@ -287,33 +333,51 @@ input:focus {
 /***************** resizable *****************/
 
 @media all and (min-width: 993px) {
+
+    .index-card {
+        width: 40% !important;
+    }
+
+    .margin-top-resizable-course {
+        margin-top: 2.8em !important;
+    }
+
     .margin-top-resizable-activity {
         margin-top: 3em !important;
     }
 
-    .margin-top-resizable-course {
-        margin-top: 2.2em !important;
+    .margin-bot-resizable-activity {
+        margin-bottom: 2em !important;
     }
 
-    .margin-bot-resizable {
-        margin-bottom: 2em !important;
+    .big-badge {
+        max-width: 8em !important;
     }
 }
 
 @media all and (max-width: 992px) {
-    .margin-top-resizable-activity {
-        margin-top: 1em !important;
+
+    .index-card {
+        width: 85% !important;
+    }
+
+    .margin-bot-resizable-course {
+        margin-bottom: 0.5em !important;
     }
 
     .margin-top-resizable-course {
         margin-top: 0em !important;
     }
 
-    .margin-bot-resizable {
+    .margin-top-resizable-activity {
+        margin-top: 1em !important;
+    }
+
+    .margin-bot-resizable-activity {
         margin-bottom: 0em !important;
     }
 
-    .index-card {
-        width: 85% !important;
+    .big-badge {
+        max-width: 12em !important;
     }
 }
