@@ -429,6 +429,18 @@ textarea:focus {
     border: none !important;
 }
 
+.cursor-copy {
+    cursor: copy !important;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.cursor-not-allowed {
+    cursor: not-allowed !important;
+}
+
 /***************** resizable *****************/
 
 @media all and (min-width: 993px) {
