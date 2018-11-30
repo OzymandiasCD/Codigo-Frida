@@ -73,5 +73,3 @@
         </li>
         <li><a class='black-text' href='index.html'><i class='material-icons'>exit_to_app</i>Cerrar sesión</a></li>
     </ul>
-
-    <main class='container'>
