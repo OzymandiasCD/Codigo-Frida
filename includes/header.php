@@ -14,11 +14,14 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='shortcut icon' href='img/icon.png' type='image/x-icon'>
     <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='css/materialize.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Quicksand:400,500,700'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>');
+    </script>
+    <script src='js/materialize.js'></script>
     <script src='js/script.js'></script>
 </head>
 
