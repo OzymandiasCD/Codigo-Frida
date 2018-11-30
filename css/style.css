@@ -27,12 +27,8 @@ h6 {
 
 /***************** materialize overrides *****************/
 
-.btn,
-.btn-small {
-    font-weight: 700 !important;
-}
-
-input:focus {
+input:focus,
+textarea:focus {
     box-shadow: 0 1px 0 0 #e91e63 !important;
     border-bottom: 1px solid #e91e63 !important;
 }
@@ -45,6 +41,20 @@ input:focus {
 
 .input-field :focus+label {
     color: #e91e63 !important;
+}
+
+.btn,
+.btn-small {
+    font-weight: 700 !important;
+}
+
+.btn {
+    height: 3.2em !important;
+}
+
+.btn-floating {
+    right: 10px !important;
+    bottom: 10px !important;
 }
 
 .progress {
@@ -170,10 +180,6 @@ input:focus {
     margin-bottom: 1.3em !important;
 }
 
-.activity-btn {
-    height: 3.2em !important;
-}
-
 #activity-dropdown li a {
     font-weight: 500;
     font-size: 0.8em !important;
@@ -195,11 +201,29 @@ input:focus {
     margin-left: 3em !important;
 }
 
+.responsive-iframe-container {
+    width: 100% !important;
+    height: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    position: relative !important;
+    padding-bottom: 62.5% !important;
+}
+
+.responsive-iframe-container iframe {
+    top: -2px !important;
+    left: -1px !important;
+    width: 103% !important;
+    height: 100.5% !important;
+    max-width: 103% !important;
+    position: absolute !important;
+}
+
 /***************** badges *****************/
 
 .big-badge {
     max-width: 8em !important;
-    transition: all 0.15s ease-in !important;
+    transition: all 0.14s ease-in !important;
     margin-top: 1em !important;
     margin-bottom: 0.2em !important;
 }
@@ -213,18 +237,68 @@ input:focus {
 .huge-badge {
     margin-top: 10% !important;
     margin-bottom: 10% !important;
-    animation: rotate-animation 2s infinite linear;
-    -webkit-animation: rotate-animation 2s infinite linear;
+    animation: rotate-animation 3s infinite linear;
+    -webkit-animation: rotate-animation 3s infinite linear;
 }
 
 @-webkit-keyframes rotate-animation {
-    from {-webkit-transform: rotateY(0deg);}
-    to {-webkit-transform: rotateY(360deg);}
+    from {
+        -webkit-transform: rotateY(0deg);
+    }
+
+    to {
+        -webkit-transform: rotateY(360deg);
+    }
 }
 
 @keyframes rotate-animation {
-    from {transform: rotateY(0deg);}
-    to {transform: rotateY(360deg);}
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/***************** avatars *****************/
+
+#team .avatar {
+    max-width: 40em !important;
+}
+
+.avatar {
+    max-width: 100%;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    border-bottom: 1px solid rgb(238, 238, 238) !important;
+}
+
+.avatar:first-of-type {
+    padding-top: 0 !important;
+}
+
+.avatar:last-of-type {
+    border: none !important;
+    padding-bottom: 0 !important;
+}
+
+.avatar img {
+    max-width: 4em !important;
+}
+
+.avatar p {
+    font-size: 0.85em !important;
+    font-weight: 500 !important;
+    margin-top: 0.4em !important;
+    margin-bottom: 0 !important;
+}
+
+/***************** profile *****************/
+
+.profile-badge-card {
+    overflow-y: hidden !important;
+    white-space: nowrap !important;
 }
 
 /***************** footer *****************/
@@ -257,8 +331,12 @@ input:focus {
 
 /***************** helpers *****************/
 
-.margin-left-1 {
+.margin-left-03 {
     margin-left: 0.3em !important;
+}
+
+.margin-left-1 {
+    margin-left: 1em !important;
 }
 
 .margin-top-2 {
@@ -281,6 +359,10 @@ input:focus {
     margin-bottom: 0.5em !important;
 }
 
+.margin-bot-075 {
+    margin-bottom: 0.75em !important;
+}
+
 .margin-bot-1 {
     margin-bottom: 1em !important;
 }
@@ -301,20 +383,33 @@ input:focus {
     margin-bottom: 0 !important;
 }
 
-.no-padding {
-    padding: 0 !important;
-}
-
-.no-padding-bot {
-    padding-bottom: 0 !important;
-}
-
 .padding-top-03 {
     padding-top: 0.3em !important;
 }
 
 .padding-bot-025 {
     padding-bottom: 0.25em !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
+.no-padding-bot {
+    padding-bottom: 0 !important;
+}
+
+.no-padding-right {
+    padding-right: 0 !important;
+}
+
+.no-padding-sides {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 .round-all-corners {
@@ -330,6 +425,10 @@ input:focus {
     width: 100% !important;
 }
 
+.borderless {
+    border: none !important;
+}
+
 /***************** resizable *****************/
 
 @media all and (min-width: 993px) {
@@ -342,16 +441,32 @@ input:focus {
         margin-top: 2.8em !important;
     }
 
-    .margin-top-resizable-activity {
+    .margin-top-resizable-3-1 {
         margin-top: 3em !important;
+    }
+
+    .margin-top-resizable-search {
+        margin-top: 2em !important;
+    }
+
+    .margin-top-resizable-team {
+        margin-top: 2.6em !important;
     }
 
     .margin-bot-resizable-activity {
         margin-bottom: 2em !important;
     }
 
+    .padding-left-resizable-profile {
+        padding-left: 2.4em !important;
+    }
+
     .big-badge {
         max-width: 8em !important;
+    }
+
+    .avatar:last-of-type {
+        margin-bottom: 1.5em !important;
     }
 }
 
@@ -369,7 +484,15 @@ input:focus {
         margin-top: 0em !important;
     }
 
-    .margin-top-resizable-activity {
+    .margin-top-resizable-3-1 {
+        margin-top: 1em !important;
+    }
+
+    .margin-top-resizable-search {
+        margin-top: 0.5em !important;
+    }
+
+    .margin-top-resizable-team {
         margin-top: 1em !important;
     }
 
@@ -377,7 +500,17 @@ input:focus {
         margin-bottom: 0em !important;
     }
 
+    .padding-left-resizable-profile {
+        padding-left: 0 !important;
+    }
+
     .big-badge {
         max-width: 12em !important;
     }
+
+    #mentors .avatar:last-of-type,
+    #fridas .avatar:last-of-type {
+        margin-bottom: 1em !important;
+    }
+
 }

@@ -1,11 +1,12 @@
 $(document).ready(function () {
     $('.tabs').tabs();
+    $('.sidenav').sidenav();
+    $('.datepicker').datepicker();
+    $('.collapsible').collapsible();
     $('.modal').modal({
         startingTop: '4%',
         endingTop: '20%'
     });
-    $('.sidenav').sidenav();
-    $('.collapsible').collapsible();
     $('.dropdown-trigger').dropdown({
         hover: true,
         coverTrigger: false
