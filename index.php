@@ -13,7 +13,7 @@
         <h1 class='pink-text no-margin-top margin-bot-025'>¡Hola de nuevo!</h1>
         <h5 class='grey-text text-darken-1 no-margin'>Nos alegra volver a verte</h5>
 
-        <form action='course.html' class='margin-top-2'>
+        <form action='course.php' class='margin-top-2'>
             <div class='input-field'>
                 <input id='email' type='email'>
                 <label for='email'>Correo electrónico</label>

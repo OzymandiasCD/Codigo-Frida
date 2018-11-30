@@ -109,7 +109,7 @@
                             </div>
                         </li>
                         <li class='collection-item'>
-                            <div><a href='' class='black-text'>layout.html</a>
+                            <div><a href='' class='black-text'>layout.php</a>
                                 <a href='' class='right'><i class='material-icons black-text'>clear</i></a>
                                 <a href='' class='right'><i class='material-icons black-text'>file_download</i></a>
                             </div>

@@ -36,7 +36,7 @@
                         <div class='col s12 m4'>
                             <div class='card round-all-corners'>
                                 <div class='card-image waves-effect waves-light'>
-                                    <a href='activity.html'><img class='round-top-corners' src='img/user.jpg'></a>
+                                    <a href='activity.php'><img class='round-top-corners' src='img/user.jpg'></a>
                                 </div>
                                 <div class='card-content activator cursor-pointer'>
                                     <span class='card-title activator no-margin-bot'>Actividad 1<i class='material-icons right'>keyboard_arrow_up</i></span>
@@ -49,7 +49,7 @@
                                     <p>Entregada el: <strong class='pink-text'>17 oct. 17:24</strong></p>
                                     <p class='margin-bot-1'>Límite de entrega: <strong class='pink-text'>18 oct.
                                             23:00</strong></p>
-                                    <a class='btn-small pink-small pink white-text width-100' href='activity.html'>Ver</a>
+                                    <a class='btn-small pink-small pink white-text width-100' href='activity.php'>Ver</a>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                         <div class='col s12 m4'>
                             <div class='card round-all-corners'>
                                 <div class='card-image waves-effect waves-light'>
-                                    <a href='activity.html'><img class='round-top-corners' src='img/user.jpg'></a>
+                                    <a href='activity.php'><img class='round-top-corners' src='img/user.jpg'></a>
                                 </div>
                                 <div class='card-content activator cursor-pointer'>
                                     <span class='card-title activator no-margin-bot'>Actividad 2<i class='material-icons right'>keyboard_arrow_up</i></span>
@@ -70,7 +70,7 @@
                                     <p>Entregada el: <strong class='pink-text'>17 oct. 17:24</strong></p>
                                     <p class='margin-bot-1'>Límite de entrega: <strong class='pink-text'>18 oct.
                                             23:00</strong></p>
-                                    <a class='btn-small pink-small pink white-text width-100' href='activity.html'>Ver</a>
+                                    <a class='btn-small pink-small pink white-text width-100' href='activity.php'>Ver</a>
                                 </div>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                         <div class='col s12 m4'>
                             <div class='card round-all-corners'>
                                 <div class='card-image waves-effect waves-light'>
-                                    <a href='activity.html'><img class='round-top-corners' src='img/user.jpg'></a>
+                                    <a href='activity.php'><img class='round-top-corners' src='img/user.jpg'></a>
                                 </div>
                                 <div class='card-content activator cursor-pointer'>
                                     <span class='card-title activator no-margin-bot'>Actividad 3<i class='material-icons right'>keyboard_arrow_up</i></span>
@@ -91,7 +91,7 @@
                                     <p>Entregada el: <strong class='pink-text'>17 oct. 17:24</strong></p>
                                     <p class='margin-bot-1'>Límite de entrega: <strong class='pink-text'>18 oct.
                                             23:00</strong></p>
-                                    <a class='btn-small pink-small pink white-text width-100' href='activity.html'>Ver</a>
+                                    <a class='btn-small pink-small pink white-text width-100' href='activity.php'>Ver</a>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                         <div class='col s12 m4'>
                             <div class='card round-all-corners'>
                                 <div class='card-image waves-effect waves-light'>
-                                    <a href='activity.html'><img class='round-top-corners' src='img/user.jpg'></a>
+                                    <a href='activity.php'><img class='round-top-corners' src='img/user.jpg'></a>
                                 </div>
                                 <div class='card-content activator cursor-pointer'>
                                     <span class='card-title activator no-margin-bot'>Actividad 4<i class='material-icons right'>keyboard_arrow_up</i></span>
@@ -112,7 +112,7 @@
                                     <p>Entregada el: <strong class='pink-text'>17 oct. 17:24</strong></p>
                                     <p class='margin-bot-1'>Límite de entrega: <strong class='pink-text'>18 oct.
                                             23:00</strong></p>
-                                    <a class='btn-small pink-small pink white-text width-100' href='activity.html'>Ver</a>
+                                    <a class='btn-small pink-small pink white-text width-100' href='activity.php'>Ver</a>
                                 </div>
                             </div>
                         </div>

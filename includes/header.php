@@ -26,15 +26,15 @@
 
     <nav class='pink darken-1'>
         <div class='nav-wrapper container'>
-            <a class='brand-logo' href='course.html'><img src='img/logo-white.png'></a>
+            <a class='brand-logo' href='course.php'><img src='img/logo-white.png'></a>
             <a class='sidenav-trigger' data-target='sidenav'><i class='white-text material-icons'>menu</i></a>
             <ul class='right hide-on-med-and-down'>
-                <li><a class='white-text' href='course.html'>Curso</a></li>
-                <li><a class='white-text' href='badges.html'>Mis insignias</a></li>
-                <li><a class='white-text' href='team.html'>Mi equipo</a></li>
-                <li><a class='white-text' href='mentors.html'>Mentores</a></li>
-                <li><a class='white-text' href='fridas.html'>Fridas</a></li>
-                <li><a class='white-text dropdown-trigger valign-wrapper' href='profile.html' data-target='profile-dropdown'>
+                <li><a class='white-text' href='course.php'>Curso</a></li>
+                <li><a class='white-text' href='badges.php'>Mis insignias</a></li>
+                <li><a class='white-text' href='team.php'>Mi equipo</a></li>
+                <li><a class='white-text' href='mentors.php'>Mentores</a></li>
+                <li><a class='white-text' href='fridas.php'>Fridas</a></li>
+                <li><a class='white-text dropdown-trigger valign-wrapper' href='profile.php' data-target='profile-dropdown'>
                         Jorge Ceballos
                         <img class='circle user-nav right' src='img/user.jpg'>
                     </a></li>
@@ -43,8 +43,8 @@
     </nav>
 
     <ul class='dropdown-content' id='profile-dropdown'>
-        <li class='pink darken-1'><a class='white-text' href='profile.html'>Mi perfil</a></li>
-        <li class='pink darken-1'><a class='white-text' href='index.html'>Cerrar sesión</a></li>
+        <li class='pink darken-1'><a class='white-text' href='profile.php'>Mi perfil</a></li>
+        <li class='pink darken-1'><a class='white-text' href='index.php'>Cerrar sesión</a></li>
     </ul>
 
     <ul class='sidenav' id='sidenav'>
@@ -53,23 +53,23 @@
                 <div class='background'>
                     <img src='img/sidenav-background.jpg'>
                 </div>
-                <a href='profile.html'>
+                <a href='profile.php'>
                     <img class='circle user-sidenav' src='img/user.jpg'>
                     <span class='white-text name'>Jorge Ceballos</span>
                     <span class='white-text email'>jor.cebs@gmail.com</span>
                 </a>
             </div>
         </li>
-        <li><a class='black-text' href='course.html'><i class='material-icons'>widgets</i>Curso</a></li>
-        <li><a class='black-text' href='badges.html'><i class='material-icons'>grade</i>Mis insignias</a></li>
+        <li><a class='black-text' href='course.php'><i class='material-icons'>widgets</i>Curso</a></li>
+        <li><a class='black-text' href='badges.php'><i class='material-icons'>grade</i>Mis insignias</a></li>
         <li>
             <div class='divider'></div>
         </li>
-        <li><a class='black-text' href='team.html'><i class='material-icons'>group</i>Mi equipo</a></li>
-        <li><a class='black-text' href='mentors.html'><i class='material-icons'>local_cafe</i>Mentores</a></li>
-        <li><a class='black-text' href='fridas.html'><i class='material-icons'>favorite</i>Fridas</a></li>
+        <li><a class='black-text' href='team.php'><i class='material-icons'>group</i>Mi equipo</a></li>
+        <li><a class='black-text' href='mentors.php'><i class='material-icons'>local_cafe</i>Mentores</a></li>
+        <li><a class='black-text' href='fridas.php'><i class='material-icons'>favorite</i>Fridas</a></li>
         <li>
             <div class='divider'></div>
         </li>
-        <li><a class='black-text' href='index.html'><i class='material-icons'>exit_to_app</i>Cerrar sesión</a></li>
+        <li><a class='black-text' href='index.php'><i class='material-icons'>exit_to_app</i>Cerrar sesión</a></li>
     </ul>
