@@ -222,10 +222,10 @@ textarea:focus {
 /***************** badges *****************/
 
 .big-badge {
-    max-width: 8em !important;
-    transition: all 0.14s ease-in !important;
+    max-width: 9em !important;
     margin-top: 1em !important;
     margin-bottom: 0.2em !important;
+    transition: all 0.14s ease-in !important;
 }
 
 .big-badge:hover {
@@ -474,10 +474,6 @@ textarea:focus {
         padding-left: 2.4em !important;
     }
 
-    .big-badge {
-        max-width: 8em !important;
-    }
-
     .avatar:last-of-type {
         margin-bottom: 1.5em !important;
     }
@@ -515,10 +511,6 @@ textarea:focus {
 
     .padding-left-resizable-profile {
         padding-left: 0 !important;
-    }
-
-    .big-badge {
-        max-width: 12em !important;
     }
 
     #mentors .avatar:last-of-type,
