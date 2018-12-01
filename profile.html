@@ -22,7 +22,7 @@
 
     <nav class='pink darken-1'>
         <div class='nav-wrapper container'>
-            <a class='brand-logo' href='course.html'><img src='img/logo-white.png'></a>
+            <a class='brand-logo' href='course.html'><img src='img/logo.png'></a>
             <a class='sidenav-trigger' data-target='sidenav'><i class='white-text material-icons'>menu</i></a>
             <ul class='right hide-on-med-and-down'>
                 <li><a class='white-text' href='course.html'>Curso</a></li>
@@ -92,15 +92,22 @@
                     </div>
                     <div class='row no-margin-bot'>
                         <div class='col s12 l4 input-field'>
-                            <input type='text' id='age' value='18 años' disabled>
+                            <input class='datepicker' type='text' id='age' value='18 años'>
                             <label for='age'>Edad</label>
                         </div>
                         <div class='col s12 l8 input-field'>
                             <input type='email' id='email' value='jor.cebs@gmail.com' disabled>
-                            <label class='' for='email'>Correo electrónico</label>
-                            <a class='pink-text left small-font modal-trigger' href='#email-modal'>Por favor
-                                verifica tu
-                                correo electrónico</a>
+                            <label for='email'>Correo electrónico</label>
+                        </div>
+                    </div>
+                    <div class='row no-margin-bot'>
+                        <div class='col s12 l4 input-field'>
+                            <input type='text' id='cellphone-number' value='+52 1 312 4567 123'>
+                            <label for='cellphone-number'>Número de celular</label>
+                        </div>
+                        <div class='col s12 l8 input-field'>
+                            <input type='text' id='provenance' value='Bachillerato 1'>
+                            <label for='provenance'>Escuela de procedencia</label>
                         </div>
                     </div>
                     <div class='row no-margin-bot'>
@@ -110,10 +117,13 @@
                         </div>
                     </div>
                     <div class='row no-margin-bot'>
-                        <div class='col s12 input-field'>
+                        <div class='col s12 input-field  no-margin-bot'>
                             <textarea class='materialize-textarea' id='bio'>Hola mi nombre es Jorge y lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sed voluptatibus doloribus maxime velit ex sint rerum dignissimos adipisci iusto voluptate ipsam cum, porro repudiandae unde sunt eaque sequi architecto.</textarea>
                             <label for='bio'>Bio</label>
                         </div>
+                    </div>
+                    <div class='right-align'>
+                        <a class='btn-small pink white-text margin-top-1'>Guardar cambios</a>
                     </div>
                 </div>
             </div>
@@ -125,8 +135,7 @@
                                 class='material-icons'>photo_camera</i></a>
                     </div>
                 </div>
-                <a class='btn pink white-text padding-top-03 margin-bot-075 width-100'>Cambiar contraseña</a>
-                <a class='btn pink white-text padding-top-03 width-100'>Guardar cambios</a>
+                <a class='btn pink white-text padding-top-03 width-100'>Cambiar contraseña</a>
             </div>
         </div>
 
@@ -134,37 +143,24 @@
             <div class='card-panel grey lighten-5 center-align no-margin-top round-all-corners'>
                 <h5 class='card-title'>Insignias</h5>
                 <div class='profile-badge-card' id='badges'>
-                    <img class='small-badge' src='img/badge-submit-1.png'>
-                    <img class='small-badge' src='img/badge-early-1.png'>
-                    <img class='small-badge' src='img/badge-submit-2.png'>
-                    <img class='small-badge' src='img/badge-good-1.png'>
-                    <img class='small-badge' src='img/badge-good-2.png'>
-                    <img class='small-badge' src='img/badge-early-2.png'>
-                    <img class='small-badge' src='img/badge-excelent-1.png'>
-                    <img class='small-badge' src='img/badge-excelent-2.png'>
-                    <img class='small-badge' src='img/badge-submit-1.png'>
-                    <img class='small-badge' src='img/badge-submit-2.png'>
-                    <img class='small-badge' src='img/badge-good-1.png'>
-                    <img class='small-badge' src='img/badge-early-1.png'>
-                    <img class='small-badge' src='img/badge-early-2.png'>
-                    <img class='small-badge' src='img/badge-good-2.png'>
-                    <img class='small-badge' src='img/badge-excelent-2.png'>
-                    <img class='small-badge' src='img/badge-excelent-1.png'>
+                    <img class='small-badge' src='img/badge-good.png'>
+                    <img class='small-badge' src='img/badge-excelent.png'>
+                    <img class='small-badge' src='img/badge-submit.png'>
+                    <img class='small-badge' src='img/badge-submit.png'>
+                    <img class='small-badge' src='img/badge-early.png'>
+                    <img class='small-badge' src='img/badge-good.png'>
+                    <img class='small-badge' src='img/badge-submit.png'>
+                    <img class='small-badge' src='img/badge-early.png'>
+                    <img class='small-badge' src='img/badge-good.png'>
+                    <img class='small-badge' src='img/badge-excelent.png'>
+                    <img class='small-badge' src='img/badge-submit.png'>
+                    <img class='small-badge' src='img/badge-good.png'>
+                    <img class='small-badge' src='img/badge-submit.png'>
+                    <img class='small-badge' src='img/badge-early.png'>
+                    <img class='small-badge' src='img/badge-good.png'>
+                    <img class='small-badge' src='img/badge-excelent.png'>
                     <img class='small-badge' src='img/badge-finish.png'>
                 </div>
-            </div>
-        </div>
-
-
-        <div id='email-modal' class='modal round-all-corners'>
-            <div class='modal-content no-padding-bot'>
-                <h4>Verifica tu correo electrónico</h4>
-                <p>Hemos mandado instrucciones para verificar tu correo a la cuenta «correo@del.usuario». Por favor
-                    revisa tus bandejas de entrada y spam. ¡Recuerda que no podrás ser asignada a un equipo ni podrás
-                    ver las actividades del curso hasta que verifiques tu correo electrónico!</p>
-            </div>
-            <div class='modal-footer'>
-                <a href='' class='modal-close waves-effect waves-green btn-flat'>Cerrar</a>
             </div>
         </div>
     </main>
@@ -186,15 +182,18 @@
                                 comenzar</div>
                             <div class='collapsible-body'><span>Una vez hayas verificado tu correo electrónico,
                                     acércate a un mentor o mentora y pídele que te asigne a un equipo de trabajo.
-                                    Puedes ver los perfiles de los mentores haciendo clic <a href=''>aquí</a>. Cuando
-                                    encuentres a un mentor o mentora de tu agrado, contáctalo/a por correo electrónico.</span></div>
+                                    Puedes ver los perfiles de los mentores haciendo clic
+                                    <a class='pink-text text-lighten-3' href='mentors.html'><strong>aquí</strong></a>.
+                                    Cuando encuentres a un mentor o mentora de tu agrado, contáctalo/a por correo
+                                    electrónico.</span></div>
                         </li>
                         <li>
                             <div class='collapsible-header grey darken-3'><i class='material-icons'>low_priority</i>Qué
                                 puedo hacer</div>
                             <div class='collapsible-body'><span>
-                                    Trabaja con tu equipo y completa las actividades del <a href=''>curso</a>. Recibe
-                                    insignias en base a tu desempeño realizado en cada actividad. ¡Colecciona
+                                    Trabaja con tu equipo y completa las actividades del
+                                    <a class='pink-text text-lighten-3' href='course.html'><strong>curso</strong></a>.
+                                    Recibe insignias en base a tu desempeño realizado en cada actividad. ¡Colecciona
                                     suficientes insignias y recibe premios en la vida real!</span></div>
                         </li>
                     </ul>
