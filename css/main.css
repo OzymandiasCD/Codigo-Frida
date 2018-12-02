@@ -53,37 +53,6 @@ h6 {
     height: 1.5em !important;
 }
 
-.tabs .tab a {
-    color: #fda7c2 !important;
-    font-weight: 500 !important;
-}
-
-.tabs .tab.disabled a {
-    color: #ffd6e3 !important;
-    font-weight: 500 !important;
-}
-
-.tabs .tab a:hover {
-    color: var(--primary-color) !important;
-}
-
-.tabs .tab.disabled a:hover {
-    color: #ffd6e3 !important;
-}
-
-.tabs .tab a.active {
-    color: var(--primary-color) !important;
-    background-color: #ffe9f0 !important;
-}
-
-.tabs .indicator {
-    background-color: var(--primary-color) !important;
-}
-
-.tabs-fixed-width {
-    border-bottom: solid #e0e0e0 1px !important;
-}
-
 /***************** header *****************/
 
 .nav-wrapper {
