@@ -221,10 +221,6 @@ h6 {
 
 /***************** avatars *****************/
 
-#team .avatar {
-    max-width: 40em !important;
-}
-
 .avatar {
     max-width: 100%;
     padding-top: 0.75em;
@@ -297,6 +293,10 @@ h6 {
     margin-left: 1em !important;
 }
 
+.margin-top-05{
+    margin-top: 0.5em !important;
+}
+
 .margin-top-1 {
     margin-top: 1em !important;
 }
@@ -311,6 +311,10 @@ h6 {
 
 .margin-top-3 {
     margin-top: 3em !important;
+}
+
+.margin-bot-01 {
+    margin-bottom: 0.1em !important;
 }
 
 .margin-bot-025 {
@@ -444,15 +448,11 @@ h6 {
     }
 
     .margin-top-resizable-team {
-        margin-top: 2.6em !important;
+        margin-top: 0 !important;
     }
 
     .margin-bot-resizable-activity {
         margin-bottom: 2em !important;
-    }
-
-    .padding-left-resizable-profile {
-        padding-left: 2.4em !important;
     }
 
     .avatar:last-of-type {
@@ -483,15 +483,11 @@ h6 {
     }
 
     .margin-top-resizable-team {
-        margin-top: 1em !important;
+        margin-top: 2em !important;
     }
 
     .margin-bot-resizable-activity {
         margin-bottom: 0em !important;
-    }
-
-    .padding-left-resizable-profile {
-        padding-left: 0 !important;
     }
 
     #mentors .avatar:last-of-type,
