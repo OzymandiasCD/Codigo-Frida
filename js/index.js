@@ -22,7 +22,6 @@ function login() {
 
 // Registers user in databse and shows confirmation modal
 function register() {
-    // let type = $('#radio-frida').prop('checked') == true ? $('#radio-frida').val() : $('#radio-mentor').val();
     let email = $("#sign-up-email").val().trim();
     let password = $("#sign-up-password").val().trim();
     let type, name, lastName, birthdate, phone, institution, genre, area;
@@ -54,15 +53,21 @@ function register() {
         'name': name, 
         'last-name': lastName,
         'birthdate': birthdate,
-        ''
+        'genre': genre,
+        'institution': institution,
+        'phone': phone,
+        'area': area
     },
     function(data) {
-        let response = JSON.parse(data);
+        console.log(data);
 
         if (!response.status) {
+            console.log("exito!");
             $('#registration-confirmation').modal('open');
         } else {
-
+            console.log
+            console.log("Errno: " + response.error.errno);
+            console.log("Message: " + response.error.message);
         }
     });
 }
