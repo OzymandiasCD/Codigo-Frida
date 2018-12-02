@@ -3,11 +3,14 @@ $(document).ready(function () {
     // Hides all login / registration cards
     $('.hide-on-load').hide();
 
-    // Materialize modal initialization override
-    $('#registration-confirmation').modal({
+    // Materialize select initialization
+    $('select').formSelect();
+
+    // Materialize modal initialization
+    $('.modal').modal({
         dismissible: false,
-        startingTop: '40%',
-        endingTop: '40%'
+        startingTop: '30%',
+        endingTop: '30%'
     });
 
 });

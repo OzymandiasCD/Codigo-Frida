@@ -16,6 +16,7 @@
     </script>
     <script src='includes/materialize/materialize.js'></script>
     <script src='js/main.js'></script>
+    <script src='js/badges.js'></script>
 </head>
 
 <body>
@@ -80,43 +81,25 @@
 
         <div class='row'>
             <div class='col s12'>
-                <div class='card grey lighten-5 center-align round-all-corners z-depth-2'>
-
-
-                    <div class='no-margin-bot' id='all-badges'>
-                        <a class='tooltipped-badge-page modal-trigger' href='#badge-modal' data-tooltip='Insignia de actividad conclusa'>
-                            <img class='big-badge' src='img/badge-submit.png'>
-                        </a>
-                        <a class='tooltipped-badge-page modal-trigger' href='#badge-modal' data-tooltip='Entrega la actividad a tiempo'>
-                            <img class='big-badge' src='img/badge-early.png'>
-                        </a>
-                        <a class='tooltipped-badge-page modal-trigger' href='#badge-modal' data-tooltip='Entrega la actividad a tiempo'>
-                            <img class='big-badge' src='img/badge-good.png'>
-                        </a>
-                        <a class='tooltipped-badge-page modal-trigger' href='#badge-modal' data-tooltip='Entrega la actividad a tiempo'>
-                            <img class='big-badge' src='img/badge-excelent.png'>
-                        </a>
-                        <a class='tooltipped-badge-page modal-trigger' href='#badge-modal' data-tooltip='Entrega la actividad a tiempo'>
-                            <img class='big-badge' src='img/badge-finish.png'>
-                        </a>
-                    </div>
-                    <div class='row no-margin-bot' id='time-badges'>
-                        <a class='tooltipped-badge-page modal-trigger' href='#badge-modal' data-tooltip='Entrega la actividad a tiempo'>
-                            <img class='big-badge' src='img/badge-submit.png'>
-                        </a>
-                        <a class='tooltipped-badge-page modal-trigger' href='#badge-modal' data-tooltip='Entrega la actividad a tiempo'>
-                            <img class='big-badge' src='img/badge-early.png'>
-                        </a>
-                    </div>
-                    <div class='row no-margin-bot' id='submission-badges'>
-                        <a class='tooltipped-badge-page modal-trigger' href='#badge-modal' data-tooltip='Entrega la actividad a tiempo'>
-                            <img class='big-badge' src='img/badge-good.png'>
-                        </a>
-                        <a class='tooltipped-badge-page modal-trigger' href='#badge-modal' data-tooltip='Entrega la actividad a tiempo'>
-                            <img class='big-badge' src='img/badge-excelent.png'>
-                        </a>
-                    </div>
-
+                <div class='card grey lighten-5 center-align round-all-corners z-depth-2 padding-2'>
+                    <a class='tooltipped modal-trigger' href='#badge-modal' data-tooltip='Insignia de actividad finalizada a tiempo'>
+                        <img class='big-badge' src='img/badge-submit.png'>
+                    </a>
+                    <a class='tooltipped modal-trigger' href='#badge-modal' data-tooltip='Insignia de entrega temprana'>
+                        <img class='big-badge' src='img/badge-early.png'>
+                    </a>
+                    <a class='tooltipped modal-trigger' href='#badge-modal' data-tooltip='Insignia de resultado buena'>
+                        <img class='big-badge' src='img/badge-good.png'>
+                    </a>
+                    <a class='tooltipped modal-trigger' href='#badge-modal' data-tooltip='Insignia de resultado excelente'>
+                        <img class='big-badge' src='img/badge-excelent.png'>
+                    </a>
+                    <a class='tooltipped modal-trigger' href='#badge-modal' data-tooltip='Insignia de unidad terminada'>
+                        <img class='big-badge' src='img/badge-unit.png'>
+                    </a>
+                    <a class='tooltipped modal-trigger' href='#badge-modal' data-tooltip='Insignia de curso terminado'>
+                        <img class='big-badge' src='img/badge-finish.png'>
+                    </a>
                 </div>
             </div>
         </div>
