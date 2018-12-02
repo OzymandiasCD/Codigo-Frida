@@ -82,34 +82,40 @@
         <div class='row'>
             <div class='col s12'>
                 <div class='card grey lighten-5 center-align round-all-corners z-depth-2 padding-2' id='badges'>
+
+                    <!-- Badges go here -->
+
                     <h1 class='margin-bot-1'>No tienes insignias aún</h1>
                     <img src='img/empty-page.png'>
                     <p class='medium-font margin-bot-2'>Trabaja con tu equipo y completa las actividades del <a class="pink-text"
                             href='course.html'>curso</a> para recibir
                         insignias en base a tu desempeño. ¡Colecciona
                         suficientes insignias y recibe premios en la vida real!</p>
+
                 </div>
             </div>
         </div>
 
         <div class='modal round-all-corners' id='badge-modal'>
             <div class='modal-content no-padding-bot'>
-                <h4>Insignia de entrega exitosa</h4>
+                <h4 id='badge-name'>
+                    <!-- Badge name goes here when clicked -->
+                </h4>
                 <div class='row'>
                     <div class='col s12 m6 center-align'>
                         <img class='huge-badge'>
                     </div>
                     <div class='col s12 m6' id='badge-description'>
-
+                        <!-- Badge description goes here when clicked -->
                     </div>
                 </div>
             </div>
             <div class='modal-footer'>
+                <!-- The button below should be hidden when clicking the unit or finish badge -->
                 <a href='activity.html' class='modal-close waves-effect waves-green btn-flat'>Ver entrega</a>
                 <a class='modal-close waves-effect waves-green btn-flat'>Cerrar</a>
             </div>
         </div>
-
     </main>
 
     <footer class='page-footer grey darken-3'>
