@@ -6,16 +6,17 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='shortcut icon' href='img/icon.png' type='image/x-icon'>
-    <link rel='stylesheet' href='css/style.css'>
-    <link rel='stylesheet' href='css/materialize.css'>
+    <link rel='stylesheet' href='css/main.css'>
+    <link rel='stylesheet' href='includes/materialize/materialize.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Quicksand:400,500,700'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script>
-        window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>');
+        window.jQuery || document.write('<script src="includes/jquery/jquery-3.3.1.min.js"><\/script>');
     </script>
-    <script src='js/materialize.js'></script>
-    <script src='js/script.js'></script>
+    <script src='includes/materialize/materialize.js'></script>
+    <script src='js/main.js'></script>
+    <script src='js/index.js'></script>
 </head>
 
 <body>
@@ -29,8 +30,8 @@
         <div class='index-form white round-all-corners'>
             <div id='login-form'>
                 <div class='center-align'>
-                    <h1 class='pink-text no-margin'>¡Hola de nuevo!</h1>
-                    <h5 class='grey-text text-darken-1 margin-bot-1'>Nos alegra volver a verte</h5>
+                    <h1 class='pink-text no-margin'>¡Bienvenido/a!</h1>
+                    <h5 class='grey-text text-darken-1 margin-bot-1'>Inicia sesión para continuar</h5>
                 </div>
                 <div class='input-field'>
                     <input type='email' id='sign-in-email'>
@@ -48,7 +49,8 @@
 
             <div class='hide-on-load' id='basic-registration-form'>
                 <div class='center-align'>
-                    <h1 class='pink-text margin-bot-1 no-margin-top'>¡Sé parte de Código Frida!</h1>
+                    <h1 class='pink-text no-margin'>Sé parte de Código Frida</h1>
+                    <h5 class='grey-text text-darken-1 margin-bot-1'>Escribe tus credenciales</h5>
                 </div>
                 <div class='input-field'>
                     <input type='email' id='sign-up-email'>
@@ -69,16 +71,16 @@
                     </label>
                     <label class='margin-left-1'>
                         <input class='with-gap' name='user-type' type='radio' id='radio-mentor'>
-                        <span class='black-text'>Soy un/a mentor/a</span>
+                        <span class='black-text'>Soy un(a) mentor(a)</span>
                     </label>
                 </p>
-                <button class='btn pink width-100 margin-top-1 margin-bot-105' onclick='showFollowRegistrationForm()'>Continuar</button>
+                <button class='btn pink width-100 margin-top-1 margin-bot-105' onclick='showUserRegistrationForm()'>Continuar</button>
                 <a class='cursor-pointer small-font pink-text' onclick='showLoginForm()'>Ya tengo una cuenta</a>
             </div>
 
             <div class='hide-on-load' id='frida-registration-form'>
                 <div class='center-align'>
-                    <h1 class='pink-text margin-bot-1 no-margin-top'>Llena tus datos para registrarte</h1>
+                    <h1 class='pink-text margin-bot-1 no-margin-top'>¡Escribe tus datos para registrarte!</h1>
                 </div>
                 <div class='input-field'>
                     <input type='text' id='frida-name'>
@@ -119,15 +121,14 @@
                         <input type='text' id='verification-code'>
                         <label for='verification-code'>Código de activación</label>
                     </div>
-                    <button class='btn pink width-100 margin-top-1 margin-bot-105' onclick='showMentorRegistrationForm()'>Continuar</button>
-                    <a class='cursor-pointer small-font pink-text' onclick='showBasicRegistrationForm()'>No soy
-                        mentor/a</a>
+                    <button class='btn pink width-100 margin-top-1 margin-bot-105' onclick=''>Continuar</button>
+                    <a class='cursor-pointer small-font pink-text' onclick=''>No soy mentor/a</a>
                 </div>
             -->
 
             <div class='hide-on-load' id='mentor-registration-form'>
                 <div class='center-align'>
-                    <h1 class='pink-text margin-bot-1 no-margin-top'>Llena tus datos para registrarte</h1>
+                    <h1 class='pink-text margin-bot-1 no-margin-top'>¡Escribe tus datos para registrarte!</h1>
                 </div>
                 <div class='input-field'>
                     <input type='text' id='name'>
@@ -175,7 +176,7 @@
                 <p class='small-font grey-text text-darken-1'>Al registrarte, aceptas los
                     <a class='modal-trigger pink-text' href='#terms-of-use'> términos de uso </a>y
                     <a class='modal-trigger pink-text' href='#privacy-policies'> políticas de privacidad</a>.</p>
-                <a class='cursor-pointer small-font pink-text' onclick='showFollowRegistrationForm()'>Cancelar</a>
+                <a class='cursor-pointer small-font pink-text' onclick='showBasicRegistrationForm()'>Regresar</a>
             </div>
         </div>
 
@@ -209,6 +210,15 @@
             </div>
             <div class='modal-footer'>
                 <a class='cursor-pointer modal-close waves-effect waves-green btn-flat'>Cerrar</a>
+            </div>
+        </div>
+        <div class='modal round-all-corners' id='registration-confirmation'>
+            <div class='modal-content no-padding-bot'>
+                <h4>¡Registro exitoso!</h4>
+                <p>Te has registrado exitosamente. Por favor inicia sesión para continuar.</p>
+            </div>
+            <div class='modal-footer'>
+                <a href='index.html' class='cursor-pointer modal-close waves-effect waves-green btn-flat'>Iniciar sesión</a>
             </div>
         </div>
     </main>
