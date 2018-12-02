@@ -1,8 +1,5 @@
 $(document).ready(function () {
 
-    // Hides all login / registration cards
-    $('.hide-on-load').hide();
-
     // Materialize select initialization
     $('select').formSelect();
 
@@ -12,6 +9,9 @@ $(document).ready(function () {
         startingTop: '30%',
         endingTop: '30%'
     });
+
+    // Hides all login / registration form-divs
+    $('.hide-on-load').hide();
 
 });
 

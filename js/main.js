@@ -5,8 +5,8 @@ $(document).ready(function () {
     $('.datepicker').datepicker();
     $('.collapsible').collapsible();
     $('.dropdown-trigger').dropdown({
-        hover: true,
-        coverTrigger: false
+        coverTrigger: false,
+        hover: true
     });
 
 });

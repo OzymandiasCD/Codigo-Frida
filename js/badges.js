@@ -10,8 +10,8 @@ $(document).ready(function () {
 
     // Materialize modal initialization
     $('.modal').modal({
-        startingTop: '4%',
-        endingTop: '17%'
+        startingTop: '15%',
+        endingTop: '15%'
     });
 
 });

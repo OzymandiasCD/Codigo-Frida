@@ -2,7 +2,7 @@
 <html lang='en'>
 
 <head>
-    <title>Código Frida</title>
+    <title>Mis insignias</title>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='shortcut icon' href='img/icon.png' type='image/x-icon'>
@@ -81,8 +81,8 @@
 
         <div class='row'>
             <div class='col s12'>
-                <div class='card grey lighten-5 center-align round-all-corners z-depth-2 padding-2'>
-                    <a class='tooltipped modal-trigger' href='#badge-modal' data-tooltip='Insignia de actividad finalizada a tiempo'>
+                <div class='card grey lighten-5 center-align round-all-corners z-depth-2 padding-2' id='badges'>
+                    <a class='tooltipped modal-trigger' href='#badge-modal' data-tooltip='Entregaste la actividad 1 a tiempo'>
                         <img class='big-badge' src='img/badge-submit.png'>
                     </a>
                     <a class='tooltipped modal-trigger' href='#badge-modal' data-tooltip='Insignia de entrega temprana'>
@@ -104,7 +104,7 @@
             </div>
         </div>
 
-        <div id='badge-modal' class='modal round-all-corners'>
+        <div class='modal round-all-corners' id='badge-modal'>
             <div class='modal-content no-padding-bot'>
                 <h4>Insignia de resultado excelente</h4>
                 <div class='row'>
