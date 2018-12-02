@@ -455,10 +455,6 @@ h6 {
         margin-bottom: 2em !important;
     }
 
-    .padding-left-resizable-profile {
-        padding-left: 2.4em !important;
-    }
-
     .avatar:last-of-type {
         margin-bottom: 1.5em !important;
     }
@@ -492,10 +488,6 @@ h6 {
 
     .margin-bot-resizable-activity {
         margin-bottom: 0em !important;
-    }
-
-    .padding-left-resizable-profile {
-        padding-left: 0 !important;
     }
 
     #mentors .avatar:last-of-type,
