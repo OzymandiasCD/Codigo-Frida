@@ -13,5 +13,5 @@ $(document).ready(function () {
         startingTop: '15%',
         endingTop: '15%'
     });
-
+    
 });

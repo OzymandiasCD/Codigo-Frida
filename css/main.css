@@ -86,8 +86,12 @@ h6 {
 
 /***************** across *****************/
 
-.small-badge {
-    max-width: 4.5em !important;
+.medium-font {
+    font-size: 1.5em;
+}
+
+.font-size-1025 {
+    font-size: 1.25em;
 }
 
 .small-font {
@@ -95,8 +99,8 @@ h6 {
     font-weight: 900;
 }
 
-.medium-font {
-    font-size: 1.5em;
+.small-badge {
+    max-width: 4.5em !important;
 }
 
 /***************** index *****************/
@@ -186,10 +190,9 @@ h6 {
 
 .huge-badge {
     max-width: 16em !important;
-    margin-top: 10% !important;
-    margin-bottom: 10% !important;
-    animation: rotate-animation 3s infinite linear;
-    -webkit-animation: rotate-animation 3s infinite linear;
+    margin-top: 1.5em !important;
+    animation: rotate-animation 3.5s infinite linear;
+    -webkit-animation: rotate-animation 3.5s infinite linear;
 }
 
 @-webkit-keyframes rotate-animation {
@@ -390,6 +393,10 @@ h6 {
 
 .width-100 {
     width: 100% !important;
+}
+
+.height-100 {
+    height: 100% !important;
 }
 
 .height-15 {
