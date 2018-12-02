@@ -182,7 +182,7 @@ h6 {
     transition: all 0.14s ease-in !important;
 }
 
-[src='img/badge-page-empty.png'] {
+[src='img/empty-page.png'] {
     max-width: 9em;
 }
 

@@ -2,28 +2,27 @@
 <html lang='en'>
 
 <head>
-    <title>Mis insignias</title>
+    <title>Mentores</title>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='shortcut icon' href='img/icon.png' type='image/x-icon'>
-    <link rel='stylesheet' href='css/main.css'>
-    <link rel='stylesheet' href='includes/materialize/materialize.css'>
+    <link rel='shortcut icon' href='../img/icon.png' type='image/x-icon'>
+    <link rel='stylesheet' href='../css/main.css'>
+    <link rel='stylesheet' href='../includes/materialize/materialize.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Quicksand:400,500,700'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script>
-        window.jQuery || document.write('<script src="includes/jquery/jquery-3.3.1.min.js"><\/script>');
+        window.jQuery || document.write('<script src="../includes/jquery/jquery-3.3.1.min.js"><\/script>');
     </script>
-    <script src='includes/materialize/materialize.js'></script>
-    <script src='js/main.js'></script>
-    <script src='js/badges.js'></script>
+    <script src='../includes/materialize/materialize.js'></script>
+    <script src='../js/main.js'></script>
 </head>
 
 <body>
 
     <nav class='pink darken-1'>
         <div class='nav-wrapper container'>
-            <a class='brand-logo' href='course.html'><img src='img/logo.png'></a>
+            <a class='brand-logo' href='course.html'><img src='../img/logo.png'></a>
             <a class='sidenav-trigger' data-target='sidenav'><i class='white-text material-icons'>menu</i></a>
             <ul class='right hide-on-med-and-down'>
                 <li><a class='white-text' href='course.html'>Curso</a></li>
@@ -33,7 +32,7 @@
                 <li><a class='white-text' href='fridas.html'>Fridas</a></li>
                 <li><a class='white-text dropdown-trigger valign-wrapper' href='profile.html' data-target='profile-dropdown'>
                         Jorge Ceballos
-                        <img class='circle user-nav right' src='img/user.jpg'>
+                        <img class='circle user-nav right' src='../img/user.jpg'>
                     </a></li>
             </ul>
         </div>
@@ -48,10 +47,10 @@
         <li>
             <div class='user-view'>
                 <div class='background'>
-                    <img src='img/sidenav-background.jpg'>
+                    <img src='../img/sidenav-background.jpg'>
                 </div>
                 <a href='profile.html'>
-                    <img class='circle user-sidenav' src='img/user.jpg'>
+                    <img class='circle user-sidenav' src='../img/user.jpg'>
                     <span class='white-text name'>Jorge Ceballos</span>
                     <span class='white-text email'>jor.cebs@gmail.com</span>
                 </a>
@@ -74,42 +73,59 @@
     <main class='container'>
 
         <div class='row'>
-            <div class='col s12'>
-                <h1 class='pink-text no-margin-bot'>Mis insignias</h1>
+            <div class='col s12 l6'>
+                <h1 class='pink-text no-margin-bot'>Mentores</h1>
+            </div>
+            <div class='col s12 l6 input-field margin-top-resizable-search no-margin-bot'>
+                <i class='material-icons prefix'>search</i>
+                <input placeholder='Búsqueda por nombre...'>
             </div>
         </div>
 
         <div class='row'>
-            <div class='col s12'>
-                <div class='card grey lighten-5 center-align round-all-corners z-depth-2 padding-2' id='badges'>
-                    <h1 class='margin-bot-1'>No tienes insignias aún</h1>
-                    <img src='img/empty-page.png'>
-                    <p class='medium-font margin-bot-2'>Trabaja con tu equipo y completa las actividades del <a class="pink-text"
-                            href='course.html'>curso</a> para recibir
-                        insignias en base a tu desempeño. ¡Colecciona
-                        suficientes insignias y recibe premios en la vida real!</p>
-                </div>
+            <div class='col s12' id='mentors'>
+                <a class='avatar valign-wrapper' href='profile.html'>
+                    <img class='circle left' src='../img/user.jpg'>
+                    <div class='margin-left-1'>
+                        <h4 class='black-text no-margin'>Lorem Ipsum Dolor Sit</h4>
+                        <p class='grey-text text-darken-1'>Mentor técnico</p>
+                    </div>
+                </a>
+
+                <a class='avatar valign-wrapper' href='profile.html'>
+                    <img class='circle left' src='../img/user.jpg'>
+                    <div class='margin-left-1'>
+                        <h4 class='black-text no-margin'>Amet Consectetur Adipisicing</h4>
+                        <p class='grey-text text-darken-1'>Mentora social</p>
+                    </div>
+                </a>
+
+                <a class='avatar valign-wrapper' href='profile.html'>
+                    <img class='circle left' src='../img/user.jpg'>
+                    <div class='margin-left-1'>
+                        <h4 class='black-text no-margin'>Elit Libero Obcaecati</h4>
+                        <p class='grey-text text-darken-1'>Mentor social</p>
+                    </div>
+                </a>
+
+                <a class='avatar valign-wrapper' href='profile.html'>
+                    <img class='circle left' src='../img/user.jpg'>
+                    <div class='margin-left-1'>
+                        <h4 class='black-text no-margin'>Fuga Ea Nemo Nisi</h4>
+                        <p class='grey-text text-darken-1'>Mentora técnica</p>
+                    </div>
+                </a>
+
+                <a class='avatar valign-wrapper' href='profile.html'>
+                    <img class='circle left' src='../img/user.jpg'>
+                    <div class='margin-left-1'>
+                        <h4 class='black-text no-margin'>Id Minima Labore Modi</h4>
+                        <p class='grey-text text-darken-1'>Mentor técnico</p>
+                    </div>
+                </a>
+
             </div>
         </div>
-
-        <div class='modal round-all-corners' id='badge-modal'>
-            <div class='modal-content no-padding-bot'>
-                <h4>Insignia de entrega exitosa</h4>
-                <div class='row'>
-                    <div class='col s12 m6 center-align'>
-                        <img class='huge-badge'>
-                    </div>
-                    <div class='col s12 m6' id='badge-description'>
-
-                    </div>
-                </div>
-            </div>
-            <div class='modal-footer'>
-                <a href='activity.html' class='modal-close waves-effect waves-green btn-flat'>Ver entrega</a>
-                <a class='modal-close waves-effect waves-green btn-flat'>Cerrar</a>
-            </div>
-        </div>
-
     </main>
 
     <footer class='page-footer grey darken-3'>
@@ -148,9 +164,9 @@
 
                 <div class='col s12 l4 offset-l2'>
                     <h4 class='grey-text text-lighten-2 margin-bot-1'>Patrocinadores</h4>
-                    <a class='sponsor' href='http://cognosac.org/' target='_blank'><img src='img/sponsor-cognos.png'></a>
-                    <a class='sponsor' href='https://ludolab.org/' target='_blank'><img src='img/sponsor-ludolab.png'></a>
-                    <a class='sponsor' href='https://inist.mx/' target='_blank'><img src='img/sponsor-inist.png'></a>
+                    <a class='sponsor' href='http://cognosac.org/' target='_blank'><img src='../img/sponsor-cognos.png'></a>
+                    <a class='sponsor' href='https://ludolab.org/' target='_blank'><img src='../img/sponsor-ludolab.png'></a>
+                    <a class='sponsor' href='https://inist.mx/' target='_blank'><img src='../img/sponsor-inist.png'></a>
                 </div>
 
             </div>
@@ -159,11 +175,11 @@
             <div class='container'>
                 &copy; 2018 Código Frida
                 <div class='right'>
-                    <a href='' target='_blank'><img class='social-media' src='img/social-facebook.png'></a>
-                    <a class='margin-left-03' href='' target='_blank'><img class='social-media' src='img/social-twitter.png'></a>
-                    <a class='margin-left-03' href='' target='_blank'><img class='social-media' src='img/social-github.png'></a>
+                    <a href='' target='_blank'><img class='social-media' src='../img/social-facebook.png'></a>
+                    <a class='margin-left-03' href='' target='_blank'><img class='social-media' src='../img/social-twitter.png'></a>
+                    <a class='margin-left-03' href='' target='_blank'><img class='social-media' src='../img/social-github.png'></a>
                     <a class='margin-left-03' href='mailto:franciscoivan_lepe@ucol.mx?Subject=Código%20Frida' target='_top'><img
-                            class='social-media' src='img/social-mail.png'></a>
+                            class='social-media' src='../img/social-mail.png'></a>
                 </div>
             </div>
         </div>
