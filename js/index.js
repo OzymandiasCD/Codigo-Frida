@@ -22,7 +22,49 @@ function login() {
 
 // Registers user in databse and shows confirmation modal
 function register() {
-    $('#registration-confirmation').modal('open');
+    // let type = $('#radio-frida').prop('checked') == true ? $('#radio-frida').val() : $('#radio-mentor').val();
+    let email = $("#sign-up-email").val().trim();
+    let password = $("#sign-up-password").val().trim();
+    let type, name, lastName, birthdate, phone, institution, genre, area;
+
+    if ($('#radio-frida').prop('checked')) {
+        type = $('#radio-frida').val();
+        name = $('#frida-name').val().trim();
+        lastName = $('#frida-last-name').val().trim();
+        birthdate = moment($('#frida-birthday').val(), 'MMM DD, YYYY').format('YYYY-MM-DD');
+        phone = $('#frida-cellphone-number').val().trim();
+        institution = $('#frida-provenance').val().trim();
+        genre = "FEMALE";
+        area = "NONE";
+    } else if ($('#radio-mentor').prop('checked')) {
+        type = $('#radio-mentor').val();
+        name = $('#mentor-name').val().trim();
+        lastName = $('#mentor-last-name').val().trim();
+        birthdate = moment($('#mentor-birthday').val(), "MMM DD, YYYY").format("YYYY-MM-DD");
+        phone = $('#mentor-cellphone-number').val().trim();
+        institution = $('#mentor-provenance').val().trim();
+        genre = $('#mentor-genre').val();
+        area = $('#mentor-area').val();
+    }
+
+    $.post('php/sign_up.php', {
+        'email': email,
+        'password': password,
+        'type': type,
+        'name': name, 
+        'last-name': lastName,
+        'birthdate': birthdate,
+        ''
+    },
+    function(data) {
+        let response = JSON.parse(data);
+
+        if (!response.status) {
+            $('#registration-confirmation').modal('open');
+        } else {
+
+        }
+    });
 }
 
 // Shows login form only

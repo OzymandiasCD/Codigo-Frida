@@ -15,6 +15,7 @@
         window.jQuery || document.write('<script src="includes/jquery/jquery-3.3.1.min.js"><\/script>');
     </script>
     <script src='includes/materialize/materialize.js'></script>
+    <script src='includes/moment/moment.min.js'></script>
     <script src='js/main.js'></script>
     <script src='js/index.js'></script>
 </head>
@@ -66,11 +67,11 @@
                 </div>
                 <p>
                     <label>
-                        <input class='with-gap' name='user-type' type='radio' id='radio-frida' checked>
+                        <input class='with-gap' name='user-type' type='radio' id='radio-frida' value="FRIDA" checked>
                         <span class='black-text'>Soy una Frida</span>
                     </label>
                     <label class='margin-left-1'>
-                        <input class='with-gap' name='user-type' type='radio' id='radio-mentor'>
+                        <input class='with-gap' name='user-type' type='radio' id='radio-mentor' value="MENTOR">
                         <span class='black-text'>Soy un(a) mentor(a)</span>
                     </label>
                 </p>
@@ -87,8 +88,8 @@
                     <label for='name'>Nombre(s)</label>
                 </div>
                 <div class='input-field'>
-                    <input type='text' id='frida-last_name'>
-                    <label for='last_name'>Apellidos</label>
+                    <input type='text' id='frida-last-name'>
+                    <label for='last-name'>Apellidos</label>
                 </div>
                 <div class='input-field'>
                     <input type='text' class='datepicker' id='frida-birthday'>
@@ -131,19 +132,19 @@
                     <h1 class='pink-text margin-bot-1 no-margin-top'>¡Escribe tus datos para registrarte!</h1>
                 </div>
                 <div class='input-field'>
-                    <input type='text' id='name'>
+                    <input type='text' id='mentor-name'>
                     <label for='name'>Nombre(s)</label>
                 </div>
                 <div class='input-field'>
-                    <input type='text' id='last_name'>
-                    <label for='last_name'>Apellidos</label>
+                    <input type='text' id='mentor-last-name'>
+                    <label for='last-name'>Apellidos</label>
                 </div>
                 <div class='input-field'>
-                    <select>
+                    <select id='mentor-genre'>
                         <option value='' disabled selected>Selecciona tu sexo...</option>
-                        <option value='male'>Masculino</option>
-                        <option value='female'>Femenino</option>
-                        <option value='other'>Otro</option>
+                        <option value='MALE'>Masculino</option>
+                        <option value='FEMALE'>Femenino</option>
+                        <option value='OTHER'>Otro</option>
                     </select>
                     <label>Sexo</label>
                 </div>
@@ -160,7 +161,7 @@
                     <label for='mentor-provenance'>Institución o empresa de procedencia</label>
                 </div>
                 <div class='input-field margin-bot-025'>
-                    <select>
+                    <select id='mentor-area'>
                         <option class='' value='' disabled selected>Selecciona tu área...</option>
                         <option value='1'>Físico matemático y ciencias de la tierra</option>
                         <option value='2'>Biología y química</option>

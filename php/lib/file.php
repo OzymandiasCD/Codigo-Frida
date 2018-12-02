@@ -20,6 +20,14 @@
             return mkdir($dirname);
         }
 
+        public static function copyFile($src, $dst) {
+            return copy($src, $dst);
+        }
+
+        public static function getFileExtension($filename) {
+            $ext = pathinfo($filename, PATHINFO_EXTENSION);
+        }
+
         // public static function deleteFile($filename) {
         //     if ($this->isReadable($filename) &&
         //         $this->fileExists($filename) &&
