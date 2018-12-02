@@ -23,7 +23,7 @@
         }
 
         public function __destruct() {
-            if ($this->isSetConnectionErrno() == false)
+            if ($this->isSetConnectionErrno() === FALSE)
                 $this->connection->close();
         }
 
@@ -51,12 +51,14 @@
         }
 
         public function execute($query) {
-            $result = $this->connection->query($query);
+            return $this->connection->query($query);
+        }
 
-            if ($result == FALSE)
-                return TRUE;
-
-            return $result;
+        public static function cleanInputString($string) {
+            $string = trim($string);
+            $string = stripslashes($string);
+            $string = htmlspecialchars($string);
+            return str_replace("'", "\'", $string);
         }
     }
 ?>
