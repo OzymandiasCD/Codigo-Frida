@@ -1,0 +1,13 @@
+.profile-badge-card {
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.modal {
+    max-width: 40em;
+}
+
+:disabled {
+    color: black !important;
+    border: none !important;
+}

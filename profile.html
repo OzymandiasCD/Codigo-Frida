@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='shortcut icon' href='img/icon.png' type='image/x-icon'>
     <link rel='stylesheet' href='css/main.css'>
-    <link rel='stylesheet' href='css/badges.css'>
+    <link rel='stylesheet' href='css/profile.css'>
     <link rel='stylesheet' href='includes/materialize/materialize.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Quicksand:400,500,700'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
@@ -32,8 +32,8 @@
                 <li><a class='white-text' href='team.html'>Mi equipo</a></li>
                 <li><a class='white-text' href='mentors.html'>Mentores</a></li>
                 <li><a class='white-text' href='fridas.html'>Fridas</a></li>
-                <li><a class='white-text dropdown-trigger valign-wrapper' href='profile.html' data-target='profile-dropdown'>
-                        Jorge Ceballos
+                <li class='active' id='nav-profile-button'><a class='white-text dropdown-trigger valign-wrapper' href='profile.html'
+                        data-target='profile-dropdown'> Jorge Ceballos
                         <img class='circle user-nav right' src='img/user.jpg'>
                     </a></li>
             </ul>
@@ -84,60 +84,69 @@
                     <h5 class='card-title'>Datos</h5>
                     <div class='row no-margin-bot'>
                         <div class='col s12 l6 input-field'>
-                            <input type='text' id='names' value='Jorge Miguel'>
-                            <label for='names'>Nombre(s)</label>
+                            <input type='text' id='user-name' value='Jorge Miguel'>
+                            <label for='user-name'>Nombre(s)</label>
                         </div>
                         <div class='col s12 l6 input-field'>
-                            <input type='text' id='last_name' value='De Jesús Ceballos'>
-                            <label for='last_name'>Apellidos</label>
+                            <input type='text' id='user-last_name' value='De Jesús Ceballos'>
+                            <label for='user-last_name'>Apellidos</label>
                         </div>
                     </div>
                     <div class='row no-margin-bot'>
                         <div class='col s12 l4 input-field'>
-                            <input class='datepicker' type='text' id='age' value='18 años'>
-                            <label for='age'>Edad</label>
+                            <input class='datepicker' type='text' id='user-age' value='18 años'>
+                            <label for='user-age'>Edad</label>
                         </div>
                         <div class='col s12 l8 input-field'>
-                            <input type='email' id='email' value='jor.cebs@gmail.com' disabled>
-                            <label for='email'>Correo electrónico</label>
+                            <input type='email' id='user-email' value='jor.cebs@gmail.com' disabled>
+                            <label for='user-email'>Correo electrónico</label>
                         </div>
                     </div>
                     <div class='row no-margin-bot'>
                         <div class='col s12 l4 input-field'>
-                            <input type='text' id='cellphone-number' value='+52 1 312 4567 123'>
-                            <label for='cellphone-number'>Número de celular</label>
+                            <input type='text' id='user-cellphone-number' value='+52 1 312 4567 123'>
+                            <label for='user-cellphone-number'>Número de celular</label>
                         </div>
                         <div class='col s12 l8 input-field'>
-                            <input type='text' id='provenance' value='Bachillerato 1'>
-                            <label for='provenance'>Escuela de procedencia</label>
+                            <input type='text' id='user-provenance' value='Bachillerato 1'>
+                            <label for='user-provenance'>Escuela de procedencia</label>
                         </div>
                     </div>
                     <div class='row no-margin-bot'>
-                        <div class='col s12 input-field'>
-                            <input type='text' id='team' value='Las chicas superpoderosas' disabled>
-                            <label for='team'>Equipo</label>
-                        </div>
+                        <a class='valign-wrapper' href='team.html' target='_blank'>
+                            <div class='col s11 input-field cursor-pointer'>
+                                <input class='cursor-pointer' type='text' id='team-name' value='Las chicas superpoderosas'
+                                    disabled>
+                                <label for='team-name'>Equipo</label>
+                            </div>
+                            <div class='col s1 input-field cursor-pointer no-padding no-margin center-align'>
+                                <i class='material-icons pink-text'>open_in_new</i>
+                            </div>
+                        </a>
                     </div>
                     <div class='row no-margin-bot'>
-                        <div class='col s12 input-field  no-margin-bot'>
-                            <textarea class='materialize-textarea' id='bio'>Hola mi nombre es Jorge y lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sed voluptatibus doloribus maxime velit ex sint rerum dignissimos adipisci iusto voluptate ipsam cum, porro repudiandae unde sunt eaque sequi architecto.</textarea>
-                            <label for='bio'>Bio</label>
+                        <div class='col s12 input-field no-margin-bot'>
+                            <textarea class='materialize-textarea' id='user-bio'>Hola mi nombre es Jorge y lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sed voluptatibus doloribus maxime velit ex sint rerum dignissimos adipisci iusto voluptate ipsam cum, porro repudiandae unde sunt eaque sequi architecto.</textarea>
+                            <label for='user-bio'>Bio</label>
                         </div>
                     </div>
                     <div class='right-align'>
-                        <a class='btn-small pink white-text margin-top-1'>Guardar cambios</a>
+                        <a class='hide-on-other-user btn-small pink white-text margin-top-1'>Guardar cambios</a>
                     </div>
                 </div>
             </div>
             <div class='col s12 l5'>
                 <div class='card round-all-corners'>
                     <div class='card-image'>
-                        <img class='round-all-corners cursor-copy' src='img/user.jpg'>
-                        <a class='btn-floating btn-large halfway-fab waves-effect waves-light pink cursor-copy'><i
-                                class='material-icons'>photo_camera</i></a>
+                        <img class='round-all-corners' src='img/user.jpg'>
+                        <a class='hide-on-other-user file-field btn-floating btn-large halfway-fab waves-effect waves-light pink'>
+                            <i class='material-icons'>photo_camera</i>
+                            <input type='file' multiple>
+                        </a>
                     </div>
                 </div>
-                <a class='btn pink white-text padding-top-03 width-100'>Cambiar contraseña</a>
+                <a class='hide-on-other-user modal-trigger btn pink white-text padding-top-03 width-100' href='#password-modal'>Cambiar
+                    contraseña</a>
             </div>
         </div>
 
@@ -169,6 +178,32 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class='modal round-all-corners' id='password-modal'>
+            <div class='modal-content no-padding-bot'>
+                <h4>Cambio de contraseña</h4>
+                <div class='row'>
+                    <div class='col s12'>
+                        <div class='input-field'>
+                            <input type='password' id='current-password'>
+                            <label for='current-password'>Contraseña actual</label>
+                        </div>
+                        <div class='input-field'>
+                            <input type='password' id='new-password'>
+                            <label for='new-password'>Contraseña nueva</label>
+                        </div>
+                        <div class='input-field'>
+                            <input type='password' id='new-password-repeat'>
+                            <label for='new-password-repeat'>Repetir contraseña nueva</label>
+                        </div>
+                    </div>
+                    <a class='modal-close btn pink white-text padding-top-03 width-100'>Aceptar</a>
+                </div>
+            </div>
+            <div class='modal-footer'>
+                <a class='modal-close waves-effect waves-green btn-flat'>Cancelar</a>
             </div>
         </div>
 
