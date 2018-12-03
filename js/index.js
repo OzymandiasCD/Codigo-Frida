@@ -37,10 +37,17 @@ function login() {
             // If response.data is null, that means that the email, password
             // or both were incorrect, so we check that response.data should be
             // not-null and, if so, redirect to the course.html page
-            if (response.data !== null)
-                window.open('course.html', '_self');
-            else
+            if (response.data !== null) {
+                // By the moment, only fridas can login, so if the type
+                // of the user is MENTOR, display a message indicating that
+                // else, redirect to the course page.
+                if (response.data.type === "FRIDA")
+                    window.open('course.html', '_self');
+                else
+                    alert("En desarrollo: paginas para mentores.");
+            } else {
                 alert('Usuario o contrase;a incorrectos.');
+            }
         } else {
             alert('ERROR LRPM!');
         }

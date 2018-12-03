@@ -6,5 +6,5 @@ function checkCurrentSession(callback) {
 
 // Close the current session
 function closeSession(callback) {
-    $.post('php/close_session.php', {}, callback);
+    $.post('php/logout.php', {}, callback);
 }
