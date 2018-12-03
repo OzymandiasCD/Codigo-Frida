@@ -39,37 +39,38 @@ function register() {
         type = $('#radio-mentor').val();
         name = $('#mentor-name').val().trim();
         lastName = $('#mentor-last-name').val().trim();
-        birthdate = moment($('#mentor-birthday').val(), "MMM DD, YYYY").format("YYYY-MM-DD");
+        birthdate = moment($('#mentor-birthday').val(), 'MMM DD, YYYY').format('YYYY-MM-DD');
         phone = $('#mentor-cellphone-number').val().trim();
         institution = $('#mentor-provenance').val().trim();
         genre = $('#mentor-genre').val();
         area = $('#mentor-area').val();
+    } else {
+        return false;
     }
 
     $.post('php/sign_up.php', {
-        'email': email,
-        'password': password,
-        'type': type,
-        'name': name, 
-        'last-name': lastName,
-        'birthdate': birthdate,
-        'genre': genre,
-        'institution': institution,
-        'phone': phone,
-        'area': area
+        email: email,
+        password: password,
+        type: type,
+        name: name, 
+        last_name: lastName,
+        birthdate: birthdate,
+        genre: genre,
+        institution: institution,
+        phone: phone,
+        area: area
     },
     function(data) {
         console.log(data);
 
-        if (!response.status) {
-            console.log("exito!");
+        if (!data.status) {
             $('#registration-confirmation').modal('open');
         } else {
-            console.log
-            console.log("Errno: " + response.error.errno);
-            console.log("Message: " + response.error.message);
+            $('#registration-failed').modal('open');
         }
-    });
+    }, "json");
+
+    return true;
 }
 
 // Shows login form only
@@ -90,10 +91,21 @@ function showBasicRegistrationForm() {
 
 // Shows user registration form only
 function showUserRegistrationForm() {
-    $('#basic-registration-form').hide();
-    if ($('#radio-frida').is(':checked')) {
-        $('#frida-registration-form').show();
-    } else {
-        $('#mentor-registration-form').show();
+    // Validate the fields before proceeding to the next form
+    let completedFiels = true;
+
+    if ($('#sign-up-email').val().trim() === '') {
+        $('#sign-up-email').addClass('red-text');
+        completedFiels = false;
+    }
+
+    // If all the fields are complete, proceed to the next form.
+    if (completedFiels) {
+        $('#basic-registration-form').hide();
+        if ($('#radio-frida').is(':checked')) {
+            $('#frida-registration-form').show();
+        } else {
+            $('#mentor-registration-form').show();
+        }
     }
 }
