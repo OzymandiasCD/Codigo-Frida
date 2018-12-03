@@ -20,6 +20,14 @@
             return mkdir($dirname);
         }
 
+        public static function removeDirectory($dirname) {
+            return rmdir($dirname);
+        }
+
+        public static function removeFile($filename) {
+            return unlink($filename);
+        }
+
         public static function copyFile($src, $dst) {
             return copy($src, $dst);
         }
@@ -27,14 +35,5 @@
         public static function getFileExtension($filename) {
             $ext = pathinfo($filename, PATHINFO_EXTENSION);
         }
-
-        // public static function deleteFile($filename) {
-        //     if ($this->isReadable($filename) &&
-        //         $this->fileExists($filename) &&
-        //         $this->isFile($filename))
-        //         return unlink($filename);
-
-        //     return FALSE;
-        // }
     }
 ?>
