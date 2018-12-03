@@ -78,42 +78,56 @@
                 <h1 class='pink-text no-margin-bot'>Mi perfil</h1>
             </div>
         </div>
-        <div class='row'>
-            <div class='col s12 l7'>
+        <div class='row no-margin-bot'>
+            <div class='col s12 l7 margin-bot-resizable'>
                 <div class='card-panel grey lighten-5 round-all-corners no-margin-bot'>
                     <h5 class='card-title'>Datos</h5>
                     <div class='row no-margin-bot'>
-                        <div class='col s12 l6 input-field'>
+                        <div class='col s12 l5 input-field'>
                             <input type='text' id='user-name' value='Jorge Miguel'>
                             <label for='user-name'>Nombre(s)</label>
                         </div>
-                        <div class='col s12 l6 input-field'>
+                        <div class='col s12 l7 input-field'>
                             <input type='text' id='user-last_name' value='De Jesús Ceballos'>
                             <label for='user-last_name'>Apellidos</label>
                         </div>
                     </div>
                     <div class='row no-margin-bot'>
-                        <div class='col s12 l4 input-field'>
+                        <div class='col s12 l5 input-field'>
                             <input class='datepicker' type='text' id='user-age' value='18 años'>
                             <label for='user-age'>Edad</label>
                         </div>
-                        <div class='col s12 l8 input-field'>
+                        <div class='col s12 l7 input-field'>
                             <input type='email' id='user-email' value='jor.cebs@gmail.com' disabled>
                             <label for='user-email'>Correo electrónico</label>
                         </div>
                     </div>
                     <div class='row no-margin-bot'>
-                        <div class='col s12 l4 input-field'>
+                        <div class='col s12 l5 input-field'>
                             <input type='text' id='user-cellphone-number' value='+52 1 312 4567 123'>
                             <label for='user-cellphone-number'>Número de celular</label>
                         </div>
-                        <div class='col s12 l8 input-field'>
+                        <div class='col s12 l7 input-field'>
                             <input type='text' id='user-provenance' value='Bachillerato 1'>
                             <label for='user-provenance'>Escuela de procedencia</label>
                         </div>
                     </div>
-                    <div class='row no-margin-bot'>
-                        <a class='valign-wrapper' href='team.html' target='_blank'>
+                    <div class='row hide-on-frida no-margin-bot'>
+                        <div class='col s12 input-field'>
+                            <select id='mentor-area'>
+                                <option value='FM_CT' selected>Físico matemático y ciencias de la tierra</option>
+                                <option value='B_Q'>Biología y química</option>
+                                <option value='M_CS'>Medicina y ciencias de la salud</option>
+                                <option value='H_CC'>Humanidades y ciencias de la conducta</option>
+                                <option value='S_EA'>Sociales y económico administrativas</option>
+                                <option value='B_CA'>Biotecnología y ciencias agropecuarias</option>
+                                <option value='ING'>Ingenierías</option>
+                            </select>
+                            <label>Área de conocimiento</label>
+                        </div>
+                    </div>
+                    <div class='row hide-on-team no-margin-bot'>
+                        <a class='valign-wrapper' href='team.html' target='_blank' id='team-link'>
                             <div class='col s11 input-field cursor-pointer'>
                                 <input class='cursor-pointer' type='text' id='team-name' value='Las chicas superpoderosas'
                                     disabled>
@@ -145,37 +159,24 @@
                         </a>
                     </div>
                 </div>
-                <a class='hide-on-other-user modal-trigger btn pink white-text padding-top-03 width-100' href='#password-modal'>Cambiar
+                <a class='hide-on-other-user modal-trigger btn pink white-text padding-top-03 margin-bot-105 width-100'
+                    href='#password-modal'>Cambiar
                     contraseña</a>
             </div>
         </div>
 
-        <!-- If the user isn't a Frida, clear inner html of #badge-section -->
-        <div id='badge-section'>
-            <div class='row'>
-                <div class='col s12'>
-                    <div class='card-panel grey lighten-5 center-align no-margin-top round-all-corners'>
-                        <h5 class='card-title'>Insignias</h5>
-                        <div class='profile-badge-card' id='user-badges'>
+        <div class='row hide-on-mentor'>
+            <div class='col s12'>
+                <div class='card-panel grey lighten-5 center-align margin-top-resizable round-all-corners'>
+                    <h5 class='card-title'>Insignias</h5>
+                    <div class='profile-badge-card' id='badges'>
 
-                            <!-- If the user is a Frida, her badges go here
-                                <img class='small-badge' src='BADGE-IMAGE-URL'>
+                        <!-- Frida badges go here
+                                <img class='small-badge' data-tooltip='BADGE-SUMMARIZE' src='BADGE-IMAGE-URL'>
                             -->
 
-                            <img class='small-badge' data-tooltip='Entregaste la actividad 1 de la unidad 1 a tiempo'
-                                src='img/badge-submit.png'>
-                            <img class='small-badge' data-tooltip='Entregaste la actividad 1 de la unidad 1 antes de tiempo'
-                                src='img/badge-early.png'>
-                            <img class='small-badge' data-tooltip='Obtuviste un resultado bueno o superior en la acividad 1 de la unidad 1'
-                                src='img/badge-good.png'>
-                            <img class='small-badge' data-tooltip='Obtuviste un resultado excelente en la acividad 1 de la unidad 1'
-                                src='img/badge-excelent.png'>
-                            <img class='small-badge' data-tooltip='¡Terminaste la primera unidad!' src='img/badge-unit.png'>
-                            <img class='small-badge' data-tooltip='¡Terminaste el curso!' src='img/badge-finish.png'>
+                        <p class='no-margin-top'>Las insignias que consigas aparecerán aquí</p>
 
-                            <!-- <p class='no-margin-top'>Las insignias que consigas aparecerán aquí</p> -->
-
-                        </div>
                     </div>
                 </div>
             </div>

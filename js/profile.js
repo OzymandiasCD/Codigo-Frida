@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+    // Materialize select initialization
+    $('select').formSelect();
+
     // Materialize tooltip initialization
     $('.small-badge').tooltip({
         position: 'top',
@@ -14,37 +17,56 @@ $(document).ready(function () {
         endingTop: '15%'
     });
 
-
-    loadProfile('mentor', false);
+    loadProfile('frida', true, true);
 
 });
 
-// Shows elements depending on user type and if it is their own profile or not
-function loadProfile(user, own) {
+// Shows elements depending on user's type, own or other's profile, and if the user has a team or not
+function loadProfile(user, own, team) {
 
-    // If profile isn't user's
+    // If profile isn't user's...
     if (!own) {
 
         // Hides profile buttons
         $('.hide-on-other-user').hide();
+        $('.caret').hide();
 
         // Removes nav button active style
         $('#nav-profile-button').removeClass('active');
+
+        // Changes html text
+        $('#badges p').html('Esta persona no ha conseguido ninguna insignia'); // ESTO DEBE IR ANTES DE INSERTAL CUALQUIER INSIGNIA, EN CASO DE SER FRIDA Y TENER INSIGNIAS
 
         // Disables inputs
         $('input').prop('disabled', true);
         $('textarea').prop('disabled', true);
 
-        // Styles page
-        
     }
 
-    // Hides elements Frida profiles shouldn't have
+    // If user is a Frida...
     if (user == 'frida') {
-        fridaProfile();
+
+        // Hides elements Frida profiles shouldn't have
+        $('.hide-on-frida').hide();
+
     }
-    // Hides elements mentor profiles shouldn't have
+
+    // If user is a mentor...
     else {
-        $('#badge-section').hide();
+
+        // Changes provenance label name
+        $('[for=user-provenance]').html('Institución o empresa de procedencia');
+
+        // Hides elements mentor profiles shouldn't have
+        $('.hide-on-mentor').hide();
+
+    }
+
+    // If the user doesn't have a team...
+    if(!team) {
+        
+        // Hides team row
+        $('.hide-on-team').hide();
+
     }
 }
