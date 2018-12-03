@@ -21,7 +21,8 @@
 
         // We are getting the information from the current user's session
         $query = "SELECT `users`.`name`, `users`.`last_name`, `users`.`birthdate`, `users`.`email`, `users`.`phone`,
-                         `users`.`institution`, `users`.`biography`, `users`.`image_path` FROM `users` WHERE `users`.`id` = $id";
+                         `users`.`institution`, `users`.`biography`, `users`.`image_path` FROM `users`
+                  WHERE `users`.`id` = $id";
 
         $result = $mysql->execute($query);
         $response->setData($result->fetch_assoc());

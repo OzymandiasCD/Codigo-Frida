@@ -36,6 +36,8 @@ $(document).ready(function () {
                     $('.user-min-name').text(name);
                     $('.user-min-email').text(response.data.email);
                     $('.user-min-image').attr('src', response.data.image_path);
+
+                    M.updateTextFields();
                 });
 
                 // If there is an id parameter in the url
@@ -60,7 +62,8 @@ $(document).ready(function () {
                     console.log(response);
 
                     if (own) {
-                        // If the profile to load is the account's owner...
+                        // If the profile to load is the account's owner
+                        // Set all the profile info
                         $('#user-name').val(response.data.name);
                         $('#user-last-name').val(response.data.last_name);
                         $('#user-birthday').val(moment(response.data.birthdate, "YYYY-MM-DD").format("MMM DD, YYYY"));
@@ -75,6 +78,8 @@ $(document).ready(function () {
                     } else {
                         // If the profile is from another user
                     }
+
+                    M.updateTextFields();
                 }, 'json');
             }
         });
