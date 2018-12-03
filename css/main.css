@@ -1,3 +1,39 @@
+@font-face {
+    font-family: 'Quicksand';
+    font-weight: 300;
+    src: url(../fonts/Quicksand/Quicksand-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    font-weight: 400;
+    src: url(../fonts/Quicksand/Quicksand-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    font-weight: 500;
+    src: url(../fonts/Quicksand/Quicksand-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    font-weight: 700;
+    src: url(../fonts/Quicksand/Quicksand-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/Material/Icons.eot);
+    src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(../fonts/Material/Icons.woff2) format('woff2'),
+        url(../fonts/Material/Icons.woff) format('woff'),
+        url(../fonts/Material/Icons.ttf) format('truetype');
+}
+
 * {
     --primary-color: #e91e63;
     font-family: 'Quicksand', Helvetica, Arial, sans-serif;
