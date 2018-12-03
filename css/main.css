@@ -1,8 +1,5 @@
-:root {
-    --primary-color: #e91e63;
-}
-
 * {
+    --primary-color: #e91e63;
     font-family: 'Quicksand', Helvetica, Arial, sans-serif;
 }
 
@@ -29,28 +26,8 @@ h6 {
     font-size: 1em !important;
 }
 
-/***************** quick materialize overrides *****************/
-
-.input-field :focus+label {
-    color: var(--primary-color) !important;
-}
-
-.btn,
-.btn-small {
-    font-weight: 700 !important;
-}
-
-.btn {
-    height: 3.2em !important;
-}
-
-.btn-floating {
-    right: 10px !important;
-    bottom: 10px !important;
-}
-
-.progress {
-    height: 1.5em !important;
+[src='img/empty-page.png'] {
+    max-width: 9em;
 }
 
 /***************** header *****************/
@@ -84,139 +61,32 @@ h6 {
     margin-top: 0.5em !important;
 }
 
-/***************** across *****************/
+/***************** footer *****************/
 
-.medium-font {
-    font-size: 1.5em;
+.collapsible,
+.collapsible div {
+    border-color: grey !important;
 }
 
-.font-size-1025 {
-    font-size: 1.25em;
+.sponsor img {
+    max-height: 4em !important;
 }
 
-.small-font {
-    font-size: 0.8em;
-    font-weight: 900;
-}
-
-.small-badge {
-    max-width: 4.5em !important;
-}
-
-/***************** index *****************/
-
-.index-form {
-    margin: auto;
-    padding: 3em;
-    margin-top: -3em;
-    margin-bottom: 16em;
-    border: solid #bdbdbd 1px;
-}
-
-/***************** course *****************/
-
-.locked-image {
-    opacity: 0.3 !important;
-    filter: brightness(0.8) !important;
-}
-
-.progress-amount {
-    font-size: 0.85em !important;
-    font-weight: 900 !important;
-    margin-left: 1em !important;
-}
-
-/***************** activity *****************/
-
-.card-title {
-    font-size: 1.3em;
-    font-weight: 500;
-    margin-top: 0 !important;
-    margin-bottom: 1.3em !important;
-}
-
-#activity-dropdown li a {
-    font-weight: 500;
-    font-size: 0.8em !important;
-}
-
-#activity-dropdown li:hover {
+.sponsor img:hover {
     filter: brightness(1.1);
 }
 
-.comment-image {
-    max-width: 1em !important;
+.sponsor:nth-of-type(2) {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
 }
 
-.comment-btn {
-    margin-top: 1.8em !important;
+.social-media {
+    max-width: 1.1em;
 }
 
-.comment-text {
-    margin-left: 3em !important;
-}
-
-.responsive-iframe-container {
-    width: 100% !important;
-    height: 0 !important;
-    max-width: 100% !important;
-    overflow: hidden !important;
-    position: relative !important;
-    padding-bottom: 62.5% !important;
-}
-
-.responsive-iframe-container iframe {
-    top: -2px !important;
-    left: -1px !important;
-    width: 103% !important;
-    height: 100.5% !important;
-    max-width: 103% !important;
-    position: absolute !important;
-}
-
-/***************** badges *****************/
-
-.big-badge {
-    max-width: 9em !important;
-    margin: 0.5em 0.2em !important;
-    transition: all 0.14s ease-in !important;
-}
-
-[src='img/empty-page.png'] {
-    max-width: 9em;
-}
-
-.big-badge:hover {
-    cursor: pointer;
-    filter: drop-shadow(12px 12px 5px rgba(100, 92, 92, 0.5)) !important;
-    transition: all 0.15s ease-in !important;
-}
-
-.huge-badge {
-    max-width: 16em !important;
-    margin-top: 1.5em !important;
-    animation: rotate-animation 3.5s infinite linear;
-    -webkit-animation: rotate-animation 3.5s infinite linear;
-}
-
-@-webkit-keyframes rotate-animation {
-    from {
-        -webkit-transform: rotateY(0deg);
-    }
-
-    to {
-        -webkit-transform: rotateY(360deg);
-    }
-}
-
-@keyframes rotate-animation {
-    from {
-        transform: rotateY(0deg);
-    }
-
-    to {
-        transform: rotateY(360deg);
-    }
+.social-media:hover {
+    filter: brightness(2);
 }
 
 /***************** avatars *****************/
@@ -248,40 +118,7 @@ h6 {
     margin-bottom: 0 !important;
 }
 
-/***************** profile *****************/
 
-.profile-badge-card {
-    overflow-y: hidden !important;
-    white-space: nowrap !important;
-}
-
-/***************** footer *****************/
-
-.collapsible,
-.collapsible div {
-    border-color: grey !important;
-}
-
-.sponsor img {
-    max-height: 4em !important;
-}
-
-.sponsor img:hover {
-    filter: brightness(1.1);
-}
-
-.sponsor:nth-of-type(2) {
-    margin-left: 1em !important;
-    margin-right: 1em !important;
-}
-
-.social-media {
-    max-width: 1.1em;
-}
-
-.social-media:hover {
-    filter: brightness(2);
-}
 
 /***************** helpers *****************/
 
@@ -293,7 +130,7 @@ h6 {
     margin-left: 1em !important;
 }
 
-.margin-top-05{
+.margin-top-05 {
     margin-top: 0.5em !important;
 }
 
@@ -427,28 +264,29 @@ h6 {
     cursor: not-allowed !important;
 }
 
+.medium-font {
+    font-size: 1.5em;
+}
+
+.font-size-1025 {
+    font-size: 1.25em;
+}
+
+.small-font {
+    font-size: 0.8em;
+    font-weight: 900;
+}
+
+.small-badge {
+    max-width: 4.5em !important;
+}
+
 /***************** resizable *****************/
 
 @media all and (min-width: 993px) {
 
-    .index-form {
-        width: 40% !important;
-    }
-
-    .margin-top-resizable-course {
-        margin-top: 2.8em !important;
-    }
-
     .margin-top-resizable-3-1 {
         margin-top: 3em !important;
-    }
-
-    .margin-top-resizable-search {
-        margin-top: 2em !important;
-    }
-
-    .margin-top-resizable-team {
-        margin-top: 0 !important;
     }
 
     .margin-bot-resizable-activity {
@@ -462,28 +300,8 @@ h6 {
 
 @media all and (max-width: 992px) {
 
-    .index-form {
-        width: 85% !important;
-    }
-
-    .margin-bot-resizable-course {
-        margin-bottom: 0.5em !important;
-    }
-
-    .margin-top-resizable-course {
-        margin-top: 0em !important;
-    }
-
     .margin-top-resizable-3-1 {
         margin-top: 1em !important;
-    }
-
-    .margin-top-resizable-search {
-        margin-top: 0.5em !important;
-    }
-
-    .margin-top-resizable-team {
-        margin-top: 2em !important;
     }
 
     .margin-bot-resizable-activity {
