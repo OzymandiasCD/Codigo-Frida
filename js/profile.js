@@ -1,23 +1,64 @@
 $(document).ready(function () {
+    $.getScript('js/session.js', function() {
+        checkCurrentSession(function(response) {
+            // There is no current session ongoing on this computer
+            // return to the index.html page
+            if (response.data === null) {
+                window.open('index.html', '_self');
+            } else {
+                // Init the rest of this shitload...
 
-    // Materialize select initialization
-    $('select').formSelect();
+                // Materialize select initialization
+                $('select').formSelect();
 
-    // Materialize tooltip initialization
-    $('.small-badge').tooltip({
-        position: 'top',
-        enterDelay: 0,
-        exitDelay: 0,
-        margin: 0
+                // Materialize tooltip initialization
+                $('.small-badge').tooltip({
+                    position: 'top',
+                    enterDelay: 0,
+                    exitDelay: 0,
+                    margin: 0
+                });
+
+                // Materialize modal initialization
+                $('.modal').modal({
+                    startingTop: '15%',
+                    endingTop: '15%'
+                });
+                
+                // Set a handler for the logout button
+                $('#logout').click(function() {
+                    closeSession(function(response) {});
+                });
+
+                // If there is an id parameter in the url
+                // identified by the name 'id', then get
+                // the value and display the information
+                // of that profile, it exists at all
+                let url = new URL(window.location.href);
+                let id = url.searchParams.get('id');
+                let requestData = {}, own = true;
+
+                // If id is not null, that means that the 
+                // profile requested is from another person
+                if (id !== null) {
+                    requestData = { id: id };
+                    own = false;
+                }
+
+                // Get the information from the user
+                // and configure the page according to
+                // the information received
+                $.post('php/profile_info.php', requestData, function(response) {
+                    console.log(response);
+                    // If the profile to load is the account's owner...
+                    if (own) {
+                        loadProfile('FRIDA', own, false);
+                    } else {
+                    }
+                }, 'json');
+            }
+        });
     });
-
-    // Materialize modal initialization
-    $('.modal').modal({
-        startingTop: '15%',
-        endingTop: '15%'
-    });
-
-    loadProfile('frida', true, true);
 });
 
 /* Loads profile depending on:
@@ -46,7 +87,7 @@ function loadProfile(user, own, team) {
     }
 
     // If user is a Frida...
-    if (user == 'frida') {
+    if (user == 'FRIDA') {
 
         // Hides elements Frida profiles shouldn't have
         $('.hide-on-frida').hide();
