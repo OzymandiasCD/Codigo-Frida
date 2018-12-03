@@ -17,11 +17,7 @@ $(document).ready(function () {
         endingTop: '15%'
     });
 
-<<<<<<< HEAD
-=======
     loadProfile('frida', true, true);
->>>>>>> b1ea779ccd3650bb7218c1b963bd15a942245256
-
 });
 
 /* Loads profile depending on:
