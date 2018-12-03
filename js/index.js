@@ -1,4 +1,12 @@
 $(document).ready(function () {
+    $.getScript('js/session.js', function() {
+        checkCurrentSession(function(response) {
+            // If response.data is not null, that means that there
+            // is an ongoing session, so redirect to the course.html page
+            if (response.data !== null)
+                window.open('course.html', '_self');
+        });
+    });
 
     // Materialize select initialization
     $('select').formSelect();
@@ -12,18 +20,37 @@ $(document).ready(function () {
 
     // Hides all login / registration form-divs
     $('.hide-on-load').hide();
-
 });
 
+// -TODO-: Finish this
 // Logs in user account and redirects to course.html
 function login() {
-    window.open('course.html', '_self');
+    let email = $('#sign-in-email').val().trim();
+    let password = $('#sign-in-password').val().trim();
+
+    $.post('php/login.php', {
+        email: email,
+        password: password
+    },
+    function(response) {
+        if (!response.status) {
+            // If response.data is null, that means that the email, password
+            // or both were incorrect, so we check that response.data should be
+            // not-null and, if so, redirect to the course.html page
+            if (response.data !== null)
+                window.open('course.html', '_self');
+            else
+                alert('Usuario o contrase;a incorrectos.');
+        } else {
+            alert('ERROR LRPM!');
+        }
+    }, 'json');
 }
 
-// Registers user in databse and shows confirmation modal
+// Registers user in database and shows confirmation modal
 function register() {
-    let email = $("#sign-up-email").val().trim();
-    let password = $("#sign-up-password").val().trim();
+    let email = $('#sign-up-email').val().trim();
+    let password = $('#sign-up-password').val().trim();
     let type, name, lastName, birthdate, phone, institution, genre, area;
 
     if ($('#radio-frida').prop('checked')) {
@@ -60,15 +87,12 @@ function register() {
         phone: phone,
         area: area
     },
-    function(data) {
-        console.log(data);
-
-        if (!data.status) {
+    function(response) {
+        if (!response.status)
             $('#registration-confirmation').modal('open');
-        } else {
+        else
             $('#registration-failed').modal('open');
-        }
-    }, "json");
+    }, 'json');
 
     return true;
 }
@@ -91,21 +115,10 @@ function showBasicRegistrationForm() {
 
 // Shows user registration form only
 function showUserRegistrationForm() {
-    // Validate the fields before proceeding to the next form
-    let completedFiels = true;
-
-    if ($('#sign-up-email').val().trim() === '') {
-        $('#sign-up-email').addClass('red-text');
-        completedFiels = false;
-    }
-
-    // If all the fields are complete, proceed to the next form.
-    if (completedFiels) {
-        $('#basic-registration-form').hide();
-        if ($('#radio-frida').is(':checked')) {
-            $('#frida-registration-form').show();
-        } else {
-            $('#mentor-registration-form').show();
-        }
+    $('#basic-registration-form').hide();
+    if ($('#radio-frida').is(':checked')) {
+        $('#frida-registration-form').show();
+    } else {
+        $('#mentor-registration-form').show();
     }
 }

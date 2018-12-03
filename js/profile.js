@@ -15,6 +15,7 @@ $(document).ready(function () {
     });
 
 
+    // mentor, frida
     loadProfile('mentor', false);
 
 });

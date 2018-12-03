@@ -16,7 +16,7 @@
         }
 
         public function remove($key) {
-            if (isset($_SESSION[$key])) {
+            if ($this->existsKey($key)) {
                 unset($_SESSION[$key]);
                 return TRUE;
             }

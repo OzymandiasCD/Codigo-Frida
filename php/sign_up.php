@@ -5,7 +5,6 @@
     require_once "lib/file.php";
     require_once "lib/mysql.php";
     require_once "lib/response.php";
-    require_once "lib/session.php";
 
     function newRandomUserDirname() {
         while (TRUE) {
@@ -32,7 +31,6 @@
         File::removeDirectory("../content/users/" . $dirname);
     }
 
-    $session = new Session();
     $mysql = new MySQL();
     $response = new Response(StatusCode::SUCCESS);
 
@@ -49,46 +47,56 @@
     /**
      * Get tha base information from the user.
      */
-    if (isset($_POST["email"]) === FALSE ||
-        ($email = MySQL::cleanInputString($_POST["email"])) === "")
+    if (isset($_POST["email"]) === FALSE || ($email = MySQL::cleanInputString($_POST["email"])) === "") {
+        removeUserDirectory($dirname, $image_path);
         (new ParameterNotFound("email"))->kill();
+    }
 
-    if (isset($_POST["password"]) === FALSE ||
-        ($password = MySQL::cleanInputString($_POST["password"])) === "")
+    if (isset($_POST["password"]) === FALSE || ($password = MySQL::cleanInputString($_POST["password"])) === "") {
+        removeUserDirectory($dirname, $image_path);
         (new ParameterNotFound("password"))->kill();
+    }
 
-    if (isset($_POST["type"]) === FALSE ||
-        ($type = MySQL::cleanInputString($_POST["type"])) === "" ||
-        ($type !== "FRIDA" && $type !== "MENTOR"))
+    if (isset($_POST["type"]) === FALSE || ($type = MySQL::cleanInputString($_POST["type"])) === ""
+        || ($type !== "FRIDA" && $type !== "MENTOR")) {
+        removeUserDirectory($dirname, $image_path);
         (new ParameterNotFound("type"))->kill();
+    }
 
-    if (isset($_POST["name"]) === FALSE ||
-        ($name = MySQL::cleanInputString($_POST["name"])) === "")
+    if (isset($_POST["name"]) === FALSE || ($name = MySQL::cleanInputString($_POST["name"])) === "") {
+        removeUserDirectory($dirname, $image_path);
         (new ParameterNotFound("name"))->kill();
+    }
 
-    if (isset($_POST["last_name"]) === FALSE ||
-        ($lastName = MySQL::cleanInputString($_POST["last_name"])) === "")
+    if (isset($_POST["last_name"]) === FALSE || ($lastName = MySQL::cleanInputString($_POST["last_name"])) === "") {
+        removeUserDirectory($dirname, $image_path);
         (new ParameterNotFound("last_name"))->kill();
+    }
 
-    if (isset($_POST["birthdate"]) === FALSE ||
-        ($birthdate = MySQL::cleanInputString($_POST["birthdate"])) === "")
+    if (isset($_POST["birthdate"]) === FALSE || ($birthdate = MySQL::cleanInputString($_POST["birthdate"])) === "") {
+        removeUserDirectory($dirname, $image_path);
         (new ParameterNotFound("birthdate"))->kill();
+    }
 
-    if (isset($_POST["phone"]) === FALSE ||
-        ($phone = MySQL::cleanInputString($_POST["phone"])) === "")
+    if (isset($_POST["phone"]) === FALSE || ($phone = MySQL::cleanInputString($_POST["phone"])) === "") {
+        removeUserDirectory($dirname, $image_path);
         (new ParameterNotFound("phone"))->kill();
+    }
 
-    if (isset($_POST["institution"]) === FALSE ||
-        ($institution = MySQL::cleanInputString($_POST["institution"])) === "")
+    if (isset($_POST["institution"]) === FALSE || ($institution = MySQL::cleanInputString($_POST["institution"])) === "") {
+        removeUserDirectory($dirname, $image_path);
         (new ParameterNotFound("institution"))->kill();
+    }
 
-    if (isset($_POST["genre"]) === FALSE ||
-        ($genre = MySQL::cleanInputString($_POST["genre"])) === "")
+    if (isset($_POST["genre"]) === FALSE || ($genre = MySQL::cleanInputString($_POST["genre"])) === "") {
+        removeUserDirectory($dirname, $image_path);
         (new ParameterNotFound("genre"))->kill();
+    }
 
-    if (isset($_POST["area"]) === FALSE ||
-        ($area = MySQL::cleanInputString($_POST["area"])) === "")
+    if (isset($_POST["area"]) === FALSE || ($area = MySQL::cleanInputString($_POST["area"])) === "") {
+        removeUserDirectory($dirname, $image_path);
         (new ParameterNotFound("area"))->kill();
+    }
 
     $query = "INSERT INTO `users` (`email`, `password`, `type`, `name`, `last_name`, `birthdate`, `genre`, `institution`,
                                    `phone`, `area`, `biography`, `image_path`)
