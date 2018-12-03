@@ -21,7 +21,10 @@ $(document).ready(function () {
 
 });
 
-// Shows elements depending on user's type, own or other's profile, and if the user has a team or not
+/* Loads profile depending on:
+    User's type | 'frida' or 'mentor'
+    Own or other's profile | true = own, false = other's),
+    Wheter the user is in a team | true = is in a team, false = isn't in a team  */
 function loadProfile(user, own, team) {
 
     // If profile isn't user's...
