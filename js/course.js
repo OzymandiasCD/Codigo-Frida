@@ -4,8 +4,18 @@ $(document).ready(function () {
     $('.tabs').tabs();
 
     // Materialize tooltip initialization
-    $('.tooltipped').tooltip({
-        position: 'top'
+    $('.cursor-not-allowed span i').tooltip({
+        position: 'top',
+        enterDelay: 0,
+        exitDelay: 0
+    });
+
+    // Materialize tooltip initialization
+    $('.tab.disabled').tooltip({
+        position: 'top',
+        enterDelay: 0,
+        exitDelay: 0,
+        margin: -10
     });
 
 });

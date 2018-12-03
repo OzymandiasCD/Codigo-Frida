@@ -3,12 +3,6 @@
     filter: brightness(0.8) !important;
 }
 
-.progress-amount {
-    font-size: 0.85em !important;
-    font-weight: 900 !important;
-    margin-left: 1em !important;
-}
-
 @media all and (min-width: 993px) {
 
     .margin-top-resizable-course {

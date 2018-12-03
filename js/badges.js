@@ -3,9 +3,9 @@ $(document).ready(function () {
     // Materialize tooltip initialization
     $('.tooltipped').tooltip({
         position: 'top',
-        margin: 125,
         enterDelay: 0,
-        exitDelay: 0
+        exitDelay: 0,
+        margin: 125
     });
 
     // Materialize modal initialization
