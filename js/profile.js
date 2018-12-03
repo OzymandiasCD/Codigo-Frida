@@ -26,8 +26,16 @@ $(document).ready(function () {
                 });
                 
                 // Set a handler for the logout button
-                $('#logout').click(function() {
+                $('.logout').click(function() {
                     closeSession(function(response) {});
+                });
+
+                // Load the basic user info
+                $.post('php/user_info.php', function(response) {
+                    let name = response.data.name.split(" ")[0] + " " + response.data.last_name.split(" ")[0];
+                    $('.user-min-name').text(name);
+                    $('.user-min-email').text(response.data.email);
+                    $('.user-min-image').attr('src', response.data.image_path);
                 });
 
                 // If there is an id parameter in the url
@@ -50,10 +58,22 @@ $(document).ready(function () {
                 // the information received
                 $.post('php/profile_info.php', requestData, function(response) {
                     console.log(response);
-                    // If the profile to load is the account's owner...
+
                     if (own) {
+                        // If the profile to load is the account's owner...
+                        $('#user-name').val(response.data.name);
+                        $('#user-last-name').val(response.data.last_name);
+                        $('#user-birthday').val(moment(response.data.birthdate, "YYYY-MM-DD").format("MMM DD, YYYY"));
+                        $('#user-email').val(response.data.email);
+                        $('#user-cellphone-number').val(response.data.phone);
+                        $('#user-provenance').val(response.data.institution);
+                        $('#user-bio').val('');
+                        $('#user-bio').val(response.data.biography);
+                        $('#user-image').attr('src', response.data.image_path);
+
                         loadProfile('FRIDA', own, false);
                     } else {
+                        // If the profile is from another user
                     }
                 }, 'json');
             }

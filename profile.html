@@ -16,6 +16,7 @@
         window.jQuery || document.write('<script src="includes/jquery/jquery-3.3.1.min.js"><\/script>');
     </script>
     <script src='includes/materialize/materialize.js'></script>
+    <script src='includes/moment/moment.min.js'></script>
     <script src='js/main.js'></script>
     <script src='js/profile.js'></script>
 </head>
@@ -32,9 +33,9 @@
                 <li><a class='white-text' href='team.html'>Mi equipo</a></li>
                 <li><a class='white-text' href='mentors.html'>Mentores</a></li>
                 <li><a class='white-text' href='fridas.html'>Fridas</a></li>
-                <li class='active' id='nav-profile-button'><a class='white-text dropdown-trigger valign-wrapper' href='profile.html'
-                        data-target='profile-dropdown'> Jorge Ceballos
-                        <img class='circle user-nav right' src='img/user.jpg'>
+                <li class='active' id='nav-profile-button'><a class='white-text dropdown-trigger valign-wrapper' id='tpm' href='profile.html'
+                        data-target='profile-dropdown'><div class='user-min-name'></div>
+                        <img class='circle user-nav right user-min-image' src=''>
                     </a></li>
             </ul>
         </div>
@@ -42,7 +43,7 @@
 
     <ul class='dropdown-content' id='profile-dropdown'>
         <li class='pink darken-1'><a class='white-text' href='profile.html'>Mi perfil</a></li>
-        <li class='pink darken-1'><a class='white-text' href='index.html' id="logout">Cerrar sesión</a></li>
+        <li class='pink darken-1'><a class='white-text logout' href='index.html'>Cerrar sesión</a></li>
     </ul>
 
     <ul class='sidenav' id='sidenav'>
@@ -52,9 +53,9 @@
                     <img src='img/sidenav-background.jpg'>
                 </div>
                 <a href='profile.html'>
-                    <img class='circle user-sidenav' src='img/user.jpg'>
-                    <span class='white-text name'>Jorge Ceballos</span>
-                    <span class='white-text email'>jor.cebs@gmail.com</span>
+                    <img class='circle user-sidenav user-min-image' src=''>
+                    <span class='white-text name user-min-name'></span>
+                    <span class='white-text email user-min-email'></span>
                 </a>
             </div>
         </li>
@@ -69,7 +70,7 @@
         <li>
             <div class='divider'></div>
         </li>
-        <li><a class='black-text' href='index.html'><i class='material-icons'>exit_to_app</i>Cerrar sesión</a></li>
+        <li><a class='black-text logout' href='index.html'><i class='material-icons'>exit_to_app</i>Cerrar sesión</a></li>
     </ul>
 
     <main class='container'>
@@ -84,31 +85,31 @@
                     <h5 class='card-title'>Datos</h5>
                     <div class='row no-margin-bot'>
                         <div class='col s12 l5 input-field'>
-                            <input type='text' id='user-name' value='Jorge Miguel'>
+                            <input type='text' id='user-name'>
                             <label for='user-name'>Nombre(s)</label>
                         </div>
                         <div class='col s12 l7 input-field'>
-                            <input type='text' id='user-last_name' value='De Jesús Ceballos'>
+                            <input type='text' id='user-last-name'>
                             <label for='user-last_name'>Apellidos</label>
                         </div>
                     </div>
                     <div class='row no-margin-bot'>
                         <div class='col s12 l5 input-field'>
-                            <input class='datepicker' type='text' id='user-birthday' value='Dec 11, 2001'>
+                            <input class='datepicker' type='text' id='user-birthday'>
                             <label for='user-birthday'>Fecha de nacimiento</label>
                         </div>
                         <div class='col s12 l7 input-field'>
-                            <input type='email' id='user-email' value='jor.cebs@gmail.com' disabled>
+                            <input type='email' id='user-email' disabled>
                             <label for='user-email'>Correo electrónico</label>
                         </div>
                     </div>
                     <div class='row no-margin-bot'>
                         <div class='col s12 l5 input-field'>
-                            <input type='text' id='user-cellphone-number' value='+52 1 312 4567 123'>
+                            <input type='text' id='user-cellphone-number'>
                             <label for='user-cellphone-number'>Número de celular</label>
                         </div>
                         <div class='col s12 l7 input-field'>
-                            <input type='text' id='user-provenance' value='Bachillerato 1'>
+                            <input type='text' id='user-provenance'>
                             <label for='user-provenance'>Escuela de procedencia</label>
                         </div>
                     </div>
@@ -140,7 +141,7 @@
                     </div>
                     <div class='row no-margin-bot'>
                         <div class='col s12 input-field no-margin-bot'>
-                            <textarea class='materialize-textarea' id='user-bio'>Hola mi nombre es Jorge y lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sed voluptatibus doloribus maxime velit ex sint rerum dignissimos adipisci iusto voluptate ipsam cum, porro repudiandae unde sunt eaque sequi architecto.</textarea>
+                            <textarea class='materialize-textarea' id='user-bio'></textarea>
                             <label for='user-bio'>Bio</label>
                         </div>
                     </div>
@@ -152,7 +153,7 @@
             <div class='col s12 l5'>
                 <div class='card round-all-corners'>
                     <div class='card-image'>
-                        <img class='round-all-corners' src='img/user.jpg'>
+                        <img class='round-all-corners' id='user-image' src=''>
                         <a class='hide-on-other-user file-field btn-floating btn-large halfway-fab waves-effect waves-light pink'>
                             <i class='material-icons'>photo_camera</i>
                             <input type='file' multiple>
