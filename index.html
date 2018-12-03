@@ -27,12 +27,14 @@
         <div class='index-form white round-all-corners'>
             <div id='login-form'>
                 <div class='center-align'>
-                    <h1 class='pink-text no-margin'>¡Bienvenido/a!</h1>
+                    <h1 class='pink-text no-margin'>¡Bienvenido@!</h1>
                     <h5 class='grey-text text-darken-1 margin-bot-1'>Inicia sesión para continuar</h5>
                 </div>
                 <div class='input-field'>
                     <input type='email' id='sign-in-email'>
                     <label for='sing-in-email'>Correo electrónico</label>
+                    <span class='helper-text yellow-text text-darken-4 hide' id='login-error-message'>Correo
+                        electrónico o contraseña incorrectos.</span>
                 </div>
                 <div class='input-field margin-bot-025'>
                     <input class='no-margin-bot' type='password' id='sign-in-password'>
@@ -222,10 +224,21 @@
         <div class='modal round-all-corners' id='registration-failed'>
             <div class='modal-content no-padding-bot'>
                 <h4>¡Ups, lo sentimos!</h4>
-                <p>Al parecer ha ocurrido un error mientras intentabamos registrar tu usuario, inténtalo de nuevo más tarde.</p>
+                <p>Al parecer ha ocurrido un error mientras intentabamos registrar tu usuario, inténtalo de nuevo más
+                    tarde.</p>
             </div>
             <div class='modal-footer'>
-                <a href='index.html' class='cursor-pointer modal-close waves-effect waves-green btn-flat'>Regresar a inicio de sesión</a>
+                <a href='index.html' class='cursor-pointer modal-close waves-effect waves-green btn-flat'>Regresar a
+                    inicio de sesión</a>
+            </div>
+        </div>
+        <div class='modal round-all-corners' id='mentor-login-error'>
+            <div class='modal-content no-padding-bot'>
+                <h4>En desarrollo</h4>
+                <p>El acceso de mentores a la plataforma ha sido suspendido por el momento.</p>
+            </div>
+            <div class='modal-footer'>
+                <a class='cursor-pointer modal-close waves-effect waves-green btn-flat'>Cerrar</a>
             </div>
         </div>
     </main>
