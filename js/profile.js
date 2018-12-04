@@ -38,7 +38,7 @@ $(document).ready(function () {
                     $('.user-min-image').attr('src', response.data.image_path);
 
                     M.updateTextFields();
-                });
+                }, 'json');
 
                 // If there is an id parameter in the url
                 // identified by the name 'id', then get
@@ -46,39 +46,51 @@ $(document).ready(function () {
                 // of that profile, it exists at all
                 let url = new URL(window.location.href);
                 let id = url.searchParams.get('id');
-                let requestData = {}, own = true;
+                let requestData = {}, isOwnProfile = true, userType = 'FRIDA', hasTeam = false;
 
                 // If id is not null, that means that the 
                 // profile requested is from another person
-                if (id !== null) {
+                if (id !== null && parseInt(id) !== response.data.id) {
                     requestData = { id: id };
-                    own = false;
+                    isOwnProfile = false;
                 }
 
                 // Get the information from the user
                 // and configure the page according to
                 // the information received
                 $.post('php/profile_info.php', requestData, function(response) {
-                    console.log(response);
+                    userType = response.data.type;
 
-                    if (own) {
-                        // If the profile to load is the account's owner
-                        // Set all the profile info
-                        $('#user-name').val(response.data.name);
-                        $('#user-last-name').val(response.data.last_name);
-                        $('#user-birthday').val(moment(response.data.birthdate, "YYYY-MM-DD").format("MMM DD, YYYY"));
-                        $('#user-email').val(response.data.email);
-                        $('#user-cellphone-number').val(response.data.phone);
-                        $('#user-provenance').val(response.data.institution);
-                        $('#user-bio').val('');
-                        $('#user-bio').val(response.data.biography);
-                        $('#user-image').attr('src', response.data.image_path);
+                    $('#user-name').val(response.data.name);
+                    $('#user-last-name').val(response.data.last_name);
+                    $('#user-birthday').val(moment(response.data.birthdate, "YYYY-MM-DD").format("MMM DD, YYYY"));
+                    $('#user-email').val(response.data.email);
+                    $('#user-cellphone-number').val(response.data.phone);
+                    $('#user-provenance').val(response.data.institution);
+                    $('#user-bio').val('');
+                    $('#user-bio').val(response.data.biography);
+                    $('#user-image').attr('src', response.data.image_path);
 
-                        loadProfile('FRIDA', own, false);
-                    } else {
-                        // If the profile is from another user
+                    if (response.data.id_team !== null) {
+                        $('#team-link').attr('href', 'team.html?id=' + response.data.id_team);
+                        $('#team-name').val(response.data.team_name);
+                        hasTeam = true;
                     }
 
+                    if (response.data.badges !== null) {
+                        let badgesDiv = $('#badges');
+                        badgesDiv.empty();
+
+                        for (let index in response.data.badges)
+                            badgesDiv.append(`<img class='small-badge' src='${response.data.badges[index]}'>`);
+                    }
+
+                    if (userType === 'MENTOR') {
+                        $(`#mentor-area option[value='${response.data.area}']`).prop('selected', true);
+                        $('#mentor-area').formSelect();
+                    }
+
+                    loadProfile(userType, isOwnProfile, hasTeam);
                     M.updateTextFields();
                 }, 'json');
             }

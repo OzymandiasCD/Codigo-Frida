@@ -111,7 +111,7 @@
                     <div class='row hide-on-frida no-margin-bot'>
                         <div class='col s12 input-field'>
                             <select id='mentor-area'>
-                                <option value='FM_CT' selected>Físico matemático y ciencias de la tierra</option>
+                                <option value='FM_CT'>Físico matemático y ciencias de la tierra</option>
                                 <option value='B_Q'>Biología y química</option>
                                 <option value='M_CS'>Medicina y ciencias de la salud</option>
                                 <option value='H_CC'>Humanidades y ciencias de la conducta</option>
@@ -137,11 +137,11 @@
                     <div class='row no-margin-bot'>
                         <div class='col s12 input-field no-margin-bot'>
                             <textarea class='materialize-textarea' id='user-bio'></textarea>
-                            <label for='user-bio'>Bio</label>
+                            <label for='user-bio'>Biografía</label>
                         </div>
                     </div>
                     <div class='right-align'>
-                        <a class='hide-on-other-user btn-small pink white-text margin-top-1'>Guardar cambios</a>
+                        <a class='hide-on-other-user btn-small pink white-text margin-top-1' disabled>Guardar cambios</a>
                     </div>
                 </div>
             </div>
@@ -149,14 +149,14 @@
                 <div class='card round-all-corners'>
                     <div class='card-image'>
                         <img class='round-all-corners' id='user-image' src=''>
-                        <a class='hide-on-other-user file-field btn-floating btn-large halfway-fab waves-effect waves-light pink'>
+                        <a class='hide-on-other-user file-field btn-floating btn-large halfway-fab waves-effect waves-light pink' disabled>
                             <i class='material-icons'>photo_camera</i>
                             <input type='file' multiple>
                         </a>
                     </div>
                 </div>
                 <a class='hide-on-other-user modal-trigger btn pink white-text padding-top-03 margin-bot-105 width-100'
-                    href='#password-modal'>Cambiar
+                    href='#password-modal' disabled>Cambiar
                     contraseña</a>
             </div>
         </div>
@@ -166,13 +166,9 @@
                 <div class='card-panel grey lighten-5 center-align margin-top-resizable round-all-corners'>
                     <h5 class='card-title'>Insignias</h5>
                     <div class='profile-badge-card' id='badges'>
-
                         <!-- Frida badges go here
-                                <img class='small-badge' data-tooltip='BADGE-SUMMARIZE' src='BADGE-IMAGE-URL'>
-                            -->
-
+                                <img class='small-badge' data-tooltip='BADGE-SUMMARIZE' src='img/badge-early.png'> -->
                         <p class='no-margin-top'>Las insignias que consigas aparecerán aquí</p>
-
                     </div>
                 </div>
             </div>
