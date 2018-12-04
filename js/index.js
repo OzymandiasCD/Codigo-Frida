@@ -44,12 +44,12 @@ function login() {
                 if (response.data.type === "FRIDA")
                     window.open('course.html', '_self');
                 else
-                    alert("En desarrollo: paginas para mentores.");
+                    $('#mentor-login-error').modal('open');
             } else {
-                alert('Usuario o contrase;a incorrectos.');
+                $('#login-error-message').removeClass('hide');
             }
         } else {
-            alert('ERROR LRPM!');
+            // alert('ERROR LRPM!');
         }
     }, 'json');
 }
