@@ -11,6 +11,7 @@
     <link rel='stylesheet' href='includes/materialize/materialize.css'>
     <script src='includes/jquery/jquery-3.3.1.min.js'></script>
     <script src='includes/materialize/materialize.js'></script>
+    <script src='includes/moment/moment.min.js'></script>
     <script src='js/main.js'></script>
     <script src='js/activity.js'></script>
 </head>
@@ -70,9 +71,8 @@
     <main class='container'>
         <div class='row margin-bot-resizable-activity'>
             <div class='col s12 l8'>
-                <h1 class='pink-text no-margin-bot'>Unidad 1 - Actividad 1. Problemáticas y objetivos del desarrollo
-                    sostenible</h1>
-                <h6 class='grey-text text-darken-3'>Límite de entrega: 18 oct. 23:00</h6>
+                <h1 class='pink-text no-margin-bot' id='activity-title'></h1>
+                <h6 class='grey-text text-darken-3' id='activity-deadline'>Límite de entrega: 18 oct. 23:00</h6>
             </div>
             <div class='col s12 l4 margin-top-resizable-3-1'>
                 <div class='row'>
@@ -80,8 +80,7 @@
                         <a class='btn-small pink white-text width-100 no-padding'><i class='material-icons'>keyboard_arrow_left</i></a>
                     </div>
                     <div class='col s8 no-padding'>
-                        <a class='dropdown-trigger btn-small pink white-text width-100 no-padding' data-target='activity-dropdown'>Actividad
-                            1</a>
+                        <a class='dropdown-trigger btn-small pink white-text width-100 no-padding' data-target='activity-dropdown' id='activity-dropdown-main'></a>
                     </div>
                     <div class='col s2'>
                         <a class='btn-small pink white-text width-100 no-padding'><i class='material-icons'>keyboard_arrow_right</i></a>
@@ -91,23 +90,23 @@
         </div>
 
         <ul class='dropdown-content' id='activity-dropdown'>
-            <li><a class='pink white-text center-align'>ACTIVIDAD 2</a></li>
+            <!-- <li><a class='pink white-text center-align'>ACTIVIDAD 2</a></li>
             <li><a class='pink white-text center-align'>ACTIVIDAD 3</a></li>
             <li><a class='pink white-text center-align'>ACTIVIDAD 4</a></li>
-            <li><a class='pink white-text center-align'>ACTIVIDAD 5</a></li>
+            <li><a class='pink white-text center-align'>ACTIVIDAD 5</a></li> -->
         </ul>
 
         <div class='row'>
             <div class='col s12 l8'>
                 <div class='card no-margin-top round-all-corners'>
                     <div class='card-image responsive-iframe-container'>
-                        <iframe src='https://docs.google.com/presentation/d/e/2PACX-1vRpaU7pWFHrAulkVUFHz07JcMUEmGAx1n5MIidM5y_GLjSkc9JRMULGbNOHgNpnlRB1p-A788LaqEHc/embed?start=false&loop=false&delayms=3000'
-                            frameborder='0' allowfullscreen='true' mozallowfullscreen='true' webkitallowfullscreen='true'></iframe>
+                        <iframe src='' frameborder='0' allowfullscreen='true' mozallowfullscreen='true' webkitallowfullscreen='true' id='activity-slides'></iframe>
                     </div>
                     <div class='card-content grey lighten-5 padding-bot-025'>
 
                         <div id='comments'>
-                            <div class='input-field'>
+                        
+                            <!-- <div class='input-field'>
                                 <img class='prefix comment-image circle' src='img/user.jpg'>
                                 <p class='comment-text'>
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nobis iste
@@ -123,22 +122,23 @@
                                     consectetur adipisicing elit. Debitis, nobis iste
                                     quidem voluptatibus doloribus sequi dolorum repellat!
                                 </p>
-                            </div>
+                            </div> -->
+                       
                         </div>
 
-                        <form>
+                        <div>
                             <div class='row'>
                                 <div class='col s9 m10'>
                                     <div class='input-field'>
-                                        <img class='prefix comment-image circle' src='img/user.jpg'>
-                                        <input class='validate' placeholder='Añade un comentario sobre esta actividad...'>
+                                        <img class='prefix comment-image circle user-min-image' src=''>
+                                        <input class='validate' placeholder='Añade un comentario sobre esta actividad...' id='comment-content'>
                                     </div>
                                 </div>
                                 <div class='col s3 m2'>
-                                    <button class='pink btn-small comment-btn width-100 no-padding'>Enviar</button>
+                                    <button class='pink btn-small comment-btn width-100 no-padding' id='send-comment'>Enviar</button>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -165,8 +165,8 @@
                 <div class='card-panel grey lighten-5 round-all-corners'>
                     <span class='black-text'>
                         <h5 class='card-title center-align'>Tu trabajo</h5>
-                        <ul class='collection'>
-                            <li class='collection-item'>
+                        <ul class='collection' id='files'>
+                            <!-- <li class='collection-item'>
                                 <div><a href='' class='black-text'>presentación.pdf</a>
                                     <a href='' class='secondary-content'><i class='material-icons black-text'>clear</i></a>
                                     <a href='' class='secondary-content'><i class='material-icons black-text'>file_download</i></a>
@@ -183,7 +183,7 @@
                                     <a href='' class='right'><i class='material-icons black-text'>clear</i></a>
                                     <a href='' class='right'><i class='material-icons black-text'>file_download</i></a>
                                 </div>
-                            </li>
+                            </li> -->
                         </ul>
                     </span>
                 </div>
@@ -192,7 +192,9 @@
                     <div class='file-field input-field'>
                         <div class='btn width-100 pink white-text'>
                             <span>Añadir archivos</span>
-                            <input type='file' multiple>
+                            <form id='upload'>
+                                <input type='file' name='file' id='upload-file'>
+                            </form>
                         </div>
                         <div class='file-path-wrapper'>
                             <input class='file-path validate hide' type='text'>
