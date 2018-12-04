@@ -48,6 +48,13 @@ $(document).ready(function() {
                         });
                     });
 
+                    $('#submit-activity').click(function() {
+                        $.post('php/submit_activity.php', {id: response.data.id_activity}, function(response) {
+                        });
+
+                        window.location.href = 'course.html';
+                    });
+
                     $('#upload-file').change(function() {
                         let formData = new FormData();
 
@@ -77,12 +84,18 @@ $(document).ready(function() {
                         });
                     });
 
-                    // console.log(response);
-
                     $('#activity-dropdown-main').text(response.data.activity_title.split('.')[0].toUpperCase());
                     $('#activity-title').text(response.data.unit_title + ' - ' + response.data.activity_title);
                     $('#activity-deadline').text('Límite de entrega: ' + moment(response.data.deadline, 'YYYY-MM-DD HH:mm:ss').format('DD/MM/YYYY HH:mm:ss'));
                     $('#activity-slides').attr('src', response.data.slides_link);
+
+                    // if (response.data.)
+                    if (response.data.status === 'FINISHED') {
+                        $('#upload-file').attr('disabled', true);
+                        $('#lpm').removeClass('pink');
+                        $('#lpm').addClass('grey');
+                        $('#submit-activity').text('Cancelar actividad');
+                    }
 
                     if (response.data.list_activities !== null) {
                         let activityDropdown = $('#activity-dropdown');

@@ -19,6 +19,7 @@
         "activity_title" => null,
         "deadline" => null,
         "slides_link" => null,
+        "status" => null,
 
         "list_activities" => null,
 
@@ -28,8 +29,8 @@
     );
 
     $query = "SELECT `units`.`id` AS `id_unit`, `units`.`title` AS `unit_title`, `activities`.`title` AS `activity_title`,
-              `activities`.`id` AS `id_activity`, `activities`.`deadline`, `activities`.`slides_link` FROM `units`, `activities`
-              WHERE `units`.`id` = `activities`.`id_unit` AND `activities`.`id` = $id";
+              `activities`.`id` AS `id_activity`, `activities`.`deadline`, `activities`.`slides_link`, `activities`.`status`
+              FROM `units`, `activities` WHERE `units`.`id` = `activities`.`id_unit` AND `activities`.`id` = $id";
 
     $result = $mysql->execute($query);
 
@@ -41,6 +42,7 @@
         $data["activity_title"] = $row["activity_title"];
         $data["deadline"] = $row["deadline"];
         $data["slides_link"] = $row["slides_link"];
+        $data["status"] = $row["status"];
 
         $query = "SELECT `activities`.`id`, `activities`.`title`, `activities`.`status` FROM `activities`
                   WHERE `activities`.`id_unit` = $row[id_unit] AND `activities`.`id` != $row[id_activity]";
