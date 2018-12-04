@@ -88,9 +88,11 @@ $(document).ready(function() {
                         let activityDropdown = $('#activity-dropdown');
 
                         for (let index in response.data.list_activities) {
-                            activityDropdown.append(`
-                                <li><a class='pink white-text center-align' href='activity.html?id=${response.data.list_activities[index].id}'>${response.data.list_activities[index].title.split('.')[0].toUpperCase()}</a></li>
-                            `);
+                            if (response.data.list_activities[index].status !== 'BLOCKED') {
+                                activityDropdown.append(`
+                                    <li><a class='pink white-text center-align' href='activity.html?id=${response.data.list_activities[index].id}'>${response.data.list_activities[index].title.split('.')[0].toUpperCase()}</a></li>
+                                `);
+                            }
                         }
                     }
 

@@ -99,28 +99,44 @@ $(document).ready(function() {
                                     default:
                                         grade = '???';
                                 }
-                                
-                                unitActivitiesDiv.append(`
-                                    <div class='col s12 m4'>
-                                        <div class='card round-all-corners'>
-                                            <div class='card-image waves-effect waves-light'>
-                                                <a href='activity.html?id=${response.data.activities[index].id}'><img class='round-top-corners' src='${response.data.activities[index].image_path}'></a>
-                                            </div>
-                                            <div class='card-content activator cursor-pointer'>
-                                                <span class='card-title activator no-margin-bot'>${activityNo}<i class='material-icons right'>keyboard_arrow_up</i></span>
-                                            </div>
-                                            <div class='card-reveal'>
-                                                <span class='card-title margin-bot-1'>${activityNo}<i class='material-icons right'>keyboard_arrow_down</i></span>
-                                                <p>Estado: <strong class='pink-text'>${status}</strong></p>
-                                                <p>Calificación: <strong class='pink-text'>${grade}</strong></p>
-                                                <p class='margin-bot-1'>Insignias conseguidas: <strong class='pink-text'>${response.data.activities[index].no_badges}</strong></p>
-                                                <p>Entregada el: <strong class='pink-text'>${submitted}</strong></p>
-                                                <p class='margin-bot-1'>Límite de entrega: <strong class='pink-text'>${deadline}</strong></p>
-                                                <a class='btn-small pink-small pink white-text width-100' href='activity.html?id=${response.data.activities[index].id}'>Ver</a>
+
+                                if (response.data.activities[index].status === 'BLOCKED') {
+                                    unitActivitiesDiv.append(`
+                                        <div class='col s12 m4'>
+                                            <div class='card round-all-corners'>
+                                                <div class='card-image waves-effect waves-light cursor-not-allowed'>
+                                                    <img class='round-top-corners locked-image' src='${response.data.activities[index].image_path}'>
+                                                </div>
+                                                <div class='card-content cursor-not-allowed'>
+                                                    <span class='card-title no-margin-bot'>${activityNo}
+                                                        <i class='material-icons right' data-tooltip='Termina las actividades anteriores para desbloquear esta actividad'>lock_outline</i></span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                `);
+                                    `);
+                                } else {
+                                    unitActivitiesDiv.append(`
+                                        <div class='col s12 m4'>
+                                            <div class='card round-all-corners'>
+                                                <div class='card-image waves-effect waves-light'>
+                                                    <a href='activity.html?id=${response.data.activities[index].id}'><img class='round-top-corners' src='${response.data.activities[index].image_path}'></a>
+                                                </div>
+                                                <div class='card-content activator cursor-pointer'>
+                                                    <span class='card-title activator no-margin-bot'>${activityNo}<i class='material-icons right'>keyboard_arrow_up</i></span>
+                                                </div>
+                                                <div class='card-reveal'>
+                                                    <span class='card-title margin-bot-1'>${activityNo}<i class='material-icons right'>keyboard_arrow_down</i></span>
+                                                    <p>Estado: <strong class='pink-text'>${status}</strong></p>
+                                                    <p>Calificación: <strong class='pink-text'>${grade}</strong></p>
+                                                    <p class='margin-bot-1'>Insignias conseguidas: <strong class='pink-text'>${response.data.activities[index].no_badges}</strong></p>
+                                                    <p>Entregada el: <strong class='pink-text'>${submitted}</strong></p>
+                                                    <p class='margin-bot-1'>Límite de entrega: <strong class='pink-text'>${deadline}</strong></p>
+                                                    <a class='btn-small pink-small pink white-text width-100' href='activity.html?id=${response.data.activities[index].id}'>Ver</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `);
+                                }
                             }
                         }
                     } else {

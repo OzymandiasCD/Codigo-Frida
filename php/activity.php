@@ -42,7 +42,7 @@
         $data["deadline"] = $row["deadline"];
         $data["slides_link"] = $row["slides_link"];
 
-        $query = "SELECT `activities`.`id`, `activities`.`title` FROM `activities`
+        $query = "SELECT `activities`.`id`, `activities`.`title`, `activities`.`status` FROM `activities`
                   WHERE `activities`.`id_unit` = $row[id_unit] AND `activities`.`id` != $row[id_activity]";
 
         $result = $mysql->execute($query);
